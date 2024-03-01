@@ -1,0 +1,1 @@
+ Complete and Free Introduction to Mathematics © 2023 by Matheus Machado da Silva Mota is licensed under Attribution 4.0 International. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/

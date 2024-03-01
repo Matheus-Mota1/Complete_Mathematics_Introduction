@@ -1,0 +1,2992 @@
+\documentclass[letterpaper]{book}
+
+% ---------- Packages -------------------
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[portuguese]{babel}
+\usepackage{hyphenat}
+\usepackage[top=2.5cm, bottom=2.5cm, left = 2.5cm, right=2.5cm]{geometry}
+\usepackage{textcomp}
+\usepackage{cancel}
+
+% -------- Cape ----------
+
+\title{Introdução Gratuita e Completa à Matemática}
+\author{Matheus Machado da Silva Mota}
+\date{\today}
+
+% ------------ Other configurations ----
+\setlength{\parskip}{0.5em}
+
+
+%------------Comutative property ---------
+\newcommand{\tikzmark}[1]{\tikz[overlay, remember picture] \node (#1){};}
+
+\tikzset{arrow down/.style={->,>=stealth, bend right=60}}
+\tikzset{arrow up/.style={->, >=stealth, bend left=60, shorten <=5pt, shorten >=3pt}}
+
+\newcommand{\downcomarrow}[3]{\draw[arrow down, #3] (#1.south) to (#2.south west);}
+\newcommand{\upcomarrow}[3]{\draw[arrow up, #3] (#1.north west) to (#2.north);}
+
+% -------- Begin of document -------------
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\chapter{Conjutos}
+
+\section{Números Naturais}
+Numéros naturais são todos os números positivos que não possuem casas decimais, incluindo o zero.
+
+
+\subsection{Propriedade dos números naturais}
+
+
+\begin{itemize}
+\item Todo número natural possui um sucessor.
+O conjunto dos números naturais é infinito ele parte do 0 até o infinito positivo $+\infty$.
+\item A soma de dois número naturais é sempre um número natural
+\item A multiplicação de dois números naturais é sempre um número natural
+\item O conjuto dos números naturais é representado pela letra \(\mathbb{N}\).
+\end{itemize}
+
+
+Representação dos números Naturais
+\[\mathbb{N} = \{0,1,2,3...+\infty\}\]
+
+\vspace{0.5em}
+Quando o zero não faz parte do conjunto é colocado um "*" que representa \textbf{Não-Nulos:}
+
+
+\[\mathbb{N}* = \{1, 2, 3...+ \infty \}\]
+
+`*` é o eliminador de zeros.
+
+Mais se subtraimos um número natural de outro número natural o resultado será sempre um número natural ? A resposta é não.  Imagine que temos \(5-8\ = -3\), -3 é um número negativo e está fora do conjuto dos números naturais e ai que entramos com os números inteiros.
+
+\section{Números Inteiros}
+
+Numéros inteiros são todos os números positivos e negativos inteiros ou seja que não possuem casas decimais, incluindo o zero, o conjunto comtempla desde o \(-\infty\) até o \(+\infty\).
+
+\[ \mathbb{Z}= \{-\infty \ldots,-3,  -2, -1, 0, 1, 2, 3, \ldots\, +\infty \} \]
+
+\subsection{Propriedades dos números Inteiros}
+
+\begin{itemize}
+\item Todo número natural é um número inteiro.
+\item A soma e a diferença entre dois números inteiros resulta em outro número inteiro.
+\item A multiplicação (produto) entre dois números inteiros é um número inteiro.
+\end{itemize}
+
+Modificadores de \(\mathbb{Z}\)
+
+Números não nulos "*":
+
+\[\mathbb{Z}^{*} = \{\ldots, -2, -1, 1, 2, \ldots\}\]
+
+Somente números positivos até o + infinito "+":
+
+\[\mathbb{Z}^{+} = \{0, 1, 2, 3, ...\} | (z+ = N)\]
+
+Somente números negativos do - infinito até o 0 `"-"`:
+
+\[\mathbb{Z}^{-} = \{..., -2, -1, 0\}\]
+
+Combinação do não nulo e somente negativos:
+
+\[\mathbb{Z}^{*-} = \{..., -2, -1, ...\}\]
+
+\subsection{Subconjuntos dos Inteiros}.
+
+O conjunto dos números naturais \( (\mathbb{N}) \) é um subconjunto de \(\mathbb{Z}\), pois está contido no conjunto dos números inteiros. Assim:
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\draw[help lines] (0,0) grid (3,3);
+\draw [blue] (0.7,0.7) -- (2.3, 2.3);
+\draw [teal] (0.7,2.3) -- (2.3,0.7);
+\draw [red]  (0.7,0.7) -- (0.3, 1.2);
+\draw [cyan] (2.3, 2.3) -- (2.7, 2.0);
+\end{tikzpicture}
+\caption{Teste}
+\end{figure}
+
+
+Veremos as operações e representações com conjutos mais a frente, mas podemos representar o gŕafico acima desta forma.
+\[\mathbb{I} \subset \mathbb{Z} \iff \mathbb{Z} \supset \mathbb{I}\]
+
+Neste caso o simbolo \(\subset\) representa 
+que um conjunto é subconjunto de outro ou seja os números naturais estão dentro dos inteiros.
+
+O mesmo vale para \(\subset\) que demonstra que \(\mathbb{Z}\)  é um superconjunto de \(\mathbb{N}\). Mas, não precisamos nos preocupar com isso basta saber para o lado que que o simbolo aponta como se fosse um "\(>\)". O lado que está virado para a \textbf{"boca"} é sempre o conjunto que possui o que está virado para a curva
+
+Como podemos ver com os números inteiros podemos realizar a multiplicação, soma e a subtração. Porém conseguimos representar apenas os números inteiros, os números de casas decimais como \(3.5\), não pertecem ao conjunto dos números inteiros, resultado este que muita das vezes é oriundo de uma divisão portanto temos os números Racionais . 
+
+\section{Números Racionais}
+
+Um número racional é todo número que pode ser representado por uma fração \({\displaystyle {\frac {a}{b}}}\) de dois números inteiros, um numerador $a$ a e um denominador não nulo \(b \neq 0\). Como b pode ser igual a 1, todo número inteiro também é um número racional. O termo racional surge do fato de \({\displaystyle {\frac {a}{b}}}\) representar a razão ou proporção entre os inteiros a e b.
+
+Como vimos na divisão é impossível dividir um número por 0, portanto o denominador tem que ser sempre tem que ser sempre diferente de 0, não nulo.
+
+A razão ou proporção é uma relação de quantas partes você tem de um montante total. Imagine que você tem uma pizza de 12 fatias porém você comeu 6 com seus amigos o a razão séria representada por \(\frac{12 - 6}{12} = \frac{6}{12} = 0,5\). 0,5 neste caso representa metade da pizza, visto que a fração nada mais que representa que uma divisão. Então o total seria o denominador neste caso e a quantidade atual de fatias de pizza o nominador.   
+
+\paragraph{Pertence ao conjunto dos Racionais}
+
+\begin{itemize}
+\item Frações que geram dízima periódica e as frações decimais exatos.
+\item Dízima periódica.  \(\dfrac{1}{3} = 0,333...\)
+\item Decimais exatos finitos. \(0,2 = \dfrac{2}{10}\)
+\end{itemize}
+
+\[
+{\displaystyle \mathbb {Q} =\left\{{\dfrac {a}{b}}|\,a\in \mathbb {Z} \quad {\mbox{e}}\quad b\in \mathbb {Z^{*}} \right\}.}
+\]
+
+\subsection{Propriedade dos N Racionais}
+
+\begin{itemize}
+\item todo número natural e todo número inteiro é um número racional.
+\item A Adição ou diferença entre dois números racionais resulta em outro número racional.
+\item O Produto entre dois números racionais é um número racional.
+\item quociente entre dois números racionais, sendo o divisor diferente de zero é um número racional.
+\end{itemize}
+
+\subsection{Subconjuntos dos Racionais}
+
+O conjunto dos números naturais \( (\mathbb{N}) \) é um subconjunto de \(\mathbb{Z}\), pois está contido no conjunto dos números inteiros. Assim:
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\draw[help lines] (0,0) grid (3,3);
+\draw [blue] (0.7,0.7) -- (2.3, 2.3);
+\draw [teal] (0.7,2.3) -- (2.3,0.7);
+\draw [red]  (0.7,0.7) -- (0.3, 1.2);
+\draw [cyan] (2.3, 2.3) -- (2.7, 2.0);
+\end{tikzpicture}
+\caption{Diagrama de Vernn que representa os conjuntos e a sua relação de posse}
+\end{figure}
+
+O conjunto dos números Racionais é um superconjunto dos números inteiros e dos números naturais, vistos que eles integram os números racionais. Podemos representar da seguinte maneira:
+
+\[ \mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \iff \mathbb{Q} \supset \mathbb{N} \supset \mathbb{Z} \]
+
+Os números racionais por sua vez suportam todas as operações, soma, subtração, multiplicação e divisão. Porém, não por completo, pois os números racionais ficam restritos apenas aqueles que possam ser representados em uma fração \(\frac{a}{b}\). E ai que entramos com os números Irracionais.
+
+\section{Números Irracionais}
+
+Um número irracional é aquele que satisfaz a definição, ou seja, um número que não pode ser representação como fração. Os números irracionais são:
+
+
+As raizes não exatas: quando um número natural não possui raiz exata, ele é considerado um número irracional. Acontece que se formos procurar a resposta para a radiciação, encontraremos uma dízima não periódica, então as raízes não exatas são números irracionais.
+
+\[ \sqrt{2}; \sqrt{3}; \sqrt{11}; \sqrt[3]{10}; \sqrt[5]{9}\]
+
+    Dízimas não periódicas: existem várias e várias dízimas não periódicas como o \(pi\). Ou raizes não exatas as mais comuns são para calcular a raiz não exata de um número.
+    
+\[\sqrt{2} = 1,414213562\ldots\]
+\[\pi = 3.14159265359\ldots\]
+
+\subsection{Propriedades dos Números Irracionais}
+
+\begin{itemize}
+\item A soma ou a diferença entre um número irracional com um número racional é um número irracional. \(\sqrt{2})+(3) = \sqrt{2} + 3\)
+\item A produto entre o número irracional é um número racional é um número irracional.
+\item O quociente entre um número irracional e um número racional, diferente de zero, é um número irracional.
+\end{itemize}
+
+\subsection{Subconjuntos dos Racionais}
+
+O conjunto dos números naturais \( (\mathbb{N}) \) é um subconjunto de \(\mathbb{Z}\), pois está contido no conjunto dos números inteiros. Assim:
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\draw[help lines] (0,0) grid (3,3);
+\draw (1,1) circle [radius=0.9] node[above]{$\mathbb{I}$};
+\draw (1,1) circle [radius=1.3] node[above]{$\mathbb{I}$};
+\draw (1,1) circle [radius=1.7] node[above]{$\mathbb{I}$};
+\draw (1,1) circle [radius=2.0] node[above]{$\mathbb{I}$};
+
+
+
+\end{tikzpicture}
+\caption{Diagrama de Vernn que representa o conjunto dos Irracionais e seus subconjuntos}
+\end{figure}
+
+O conjunto dos números Irracionais é um superconjunto dos números racionais, que é um superconjunto dos inteiros que é superconjunto dos números naturais, vistos que todos os conjuntos que vimos anteriormente integram o conjunto dos números Irracionais podemos representar da seguinte maneira:
+
+
+
+
+\[\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{I} \iff \mathbb{I} \supset \mathbb{Q} \supset \mathbb{N} \supset \mathbb{Z} \]
+
+Os números racionais por sua vez suportam todas as operações por completo inclusive aqueles que não podem ser representados por fração. Porém, por incrível que pareça ainda temos números que não fazem parte do conjunto Irracional sendo eles as raízes negativas que por sua vez são números imaginários, portanto pertencedo ao conjuntos dos números imaginários ( Esses matemáticos usam um crack pessado ), todos os conjuntos que vimos aqui faz parte dos dos números reais ou seja que de fato existem. É importante saber disto, porém este livro não abordara os números imaginários.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\draw[help lines] (0,0) grid (3,3);
+\draw [blue] (0.7,0.7) -- (2.3, 2.3);
+\draw [teal] (0.7,2.3) -- (2.3,0.7);
+\draw [red]  (0.7,0.7) -- (0.3, 1.2);
+\draw [cyan] (2.3, 2.3) -- (2.7, 2.0);
+\end{tikzpicture}
+\caption{Diagrama de Vernn que representa os números reais e os imaginários}
+\end{figure}
+
+\section{Operações com conjuntos}
+
+\chapter{Matemática Básica}
+
+\section{Adição}
+
+A adição é a junção de valores, quando temos dois valores ou mais e os unimos em apenas um, agregando seus valores.
+
+\subsection{Nomenclatura}
+
+\[ x + y = z \]
+\[ x \,|\, y = \text{parcelas} \]
+\[ z = \text{Soma ou total} \]
+
+Exemplo:
+\[ 7 + 3 = 10 \]
+\[ 7 \,|\, 3 = \text{parcelas} \]
+\[ 10 = \text{Soma ou total} \]
+
+\subsection{Propriedades da Adição}
+
+\paragraph{P1) Elemento Neutro}
+
+O elemento neutro da adição é o zero.
+
+\[ a + 0 = a \]
+\[ 7 + 0 = 7 \]
+
+\paragraph{P2) Comutativa}
+
+A ordem das parcelas não altera a soma.
+
+\[ a + b = b + a \]
+\[ 2 + 3 = 3 + 2 \]
+
+\paragraph{P3) Associativa (Agrupar)}
+
+\[ (a + b) + c = a + (b + c) \]
+\[ (5 + 1) + 4 = 5 + (1 + 4) \]
+
+\vspace{0.5em}
+Em uma adição, a maneira de agrupar as parcelas não altera a soma. Ou seja, na adição de três números, associando os dois primeiros ou os dois últimos, obtemos resultados iguais.
+
+\section{Subtração}
+
+A subtração é a operação contrária a \textbf{Adição}
+onde um valor subtrai o outro, ou seja um tira o valor do outro sobrando apenas a diferença de um para o outro.
+
+\subsection{Nomenclatura}
+
+\[a - b = c\]
+
+\[a  = \text{Minuendo}\]
+\[b = \text{Subtraendo}\]
+\[c = \text{Resto (diferença)}\]
+
+\subsection{Propriedades}
+
+Em uma subtração, a soma do minuendo, com o subtraendo e com o resto resultou 30. Qual o valor do minuendo ? 
+
+
+\[(M + S + R = 2M)\]
+
+\[10 + 5 = 15\]
+\[15 + 10 + 5 = 30\]
+
+\[M + S + R = 30\]
+\[2M = 30\]
+\[M = 30/2 => M = 15\]
+
+
+\section{Divisão}
+
+Imagine a divisão como um fazendeiro que tem 210 pepinos e precisa colocar 20 pepinos em cada caixa. A divisão nós permite saber quantas caixas ele vai conseguir encher com essa quantidade de pepinos e quantos pepinos irão sobrar.
+
+
+
+\subsection{Nomenclatura}
+Dividendo | Divisor
+
+Quociente
+
+Resto
+
+\[
+\begin{array}{c|cccc}
+\multicolumn{2}{r}{8} & \multicolumn{1}{|}{4} & 4\\
+\cline{2-5}
+20 & \multicolumn{4}{r}{20} \\
+\multicolumn{2}{r}{20} & \multicolumn{1}{|}{} & & \\
+\multicolumn{2}{r}{0} & & & \\
+\end{array}
+\]
+
+
+\subsection{Propriedades}
+
+Propriedade Fundamental da Divisão:
+
+\[ D = d \times q + r \]
+
+Onde:
+\[ D = \text{dividendo} \]
+\[ q = \text{quociente} \]
+\[ r = \text{resto} \]
+
+\paragraph{Exemplo:}
+
+Em uma divisão, o divisor é 20, o quociente é 13, e o resto é o maior possível. O dividendo vale:
+
+\[ 20 \div 13 = 1 \]
+
+Para tirar a prova de uma divisão, basta verificar a definição:
+
+\[ 1 \times 13 + 7 = 20 \]
+
+Cuidado com o zero!!!
+
+\[ 10 \div 5 = 2 \]
+\[ 8 \div 2 = 4 \]
+\[ 0 \div 3 = 0 \]
+\[ 3 \div 0 = \text{indeterminado} \]
+
+\section{Multiplicação}
+
+A multiplicação é basicamente uma operação de adição porém várias vezes, definida pelos números que estamos multiplicando.
+
+
+Exemplos:
+
+\[ 2 \times 3 \times = 6\]
+
+É o mesmo que \(2 + 2 + 2\) ou seja estamos somando o 2, 3 vezes. O mesmo se aplica inversamente veremos essa propriedade mais para frente \( 3 + 3 = 6\)
+ 
+\[ 4 \times 4 = 12 \]
+\[ 4 \times 4 = 4 + 4 + 4 +\]
+
+Ou seja estamos somando o numero quatro 4 vezes. Porém essa forma é totalmente imprática pois tomaria muito tempo, essa explicação foi dado somente como uma forma de entendimento, é recomendável que você decore a tábuada para que possa efetuar calculos de multiplicação de maneira efetiva.
+
+\begin{center}
+\begin{tabular}{|c|*{9}{>{\centering\arraybackslash}p{1cm}|}}
+\hline
+\textbf{Tabuada} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} \\
+\hline
+\textbf{\(1 \times\)} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+\textbf{\(2 \times\)} & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 \\
+\textbf{\(3 \times\)} & 3 & 6 & 9 & 12 & 15 & 18 & 21 & 24 & 27 \\
+\textbf{\(4 \times\)} & 4 & 8 & 12 & 16 & 20 & 24 & 28 & 32 & 36 \\
+\textbf{\(5 \times\)} & 5 & 10 & 15 & 20 & 25 & 30 & 35 & 40 & 45 \\
+\textbf{\(6 \times\)} & 6 & 12 & 18 & 24 & 30 & 36 & 42 & 48 & 54 \\
+\textbf{\(7 \times\)} & 7 & 14 & 21 & 28 & 35 & 42 & 49 & 56 & 63 \\
+\textbf{\(8 \times\)} & 8 & 16 & 24 & 32 & 40 & 48 & 56 & 64 & 72 \\
+\textbf{\(9 \times\)} & 9 & 18 & 27 & 36 & 45 & 54 & 63 & 72 & 81 \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Nomenclatura}
+
+\subsection{Propriedades da Multiplicação}
+
+\paragraph{P1) Comutativa}
+
+A ordem dos fatores não altera o produto.
+
+\[ a \times b = b \times a \]
+\[ 2 \times 3 = 3 \times 2 \]
+
+\paragraph{P2) Elemento Neutro}
+
+O elemento neutro da multiplicação é o número 1.
+
+\[ a \times 1 = a \]
+\[ 2 \times 1 = 2 \]
+
+\paragraph{P3) Associativa}
+
+Em uma multiplicação, a maneira de agrupar os fatores não altera o produto.
+
+\[ (a \times b) \times c = a \times (b \times c) \]
+\[ (2 \times 3) \times 4 = 2 \times (3 \times 4) \]
+
+\paragraph{P4) Distributiva na Adição} 
+
+Multiplicamos o número que está fora dos parenteses pelo que está dentro.
+
+\[ a\tikzmark{a} \times (b\tikzmark{b} + c\tikzmark{c}) = a \times b + a \times c \]
+
+\[ 2\tikzmark{2} \times (3\tikzmark{3} + 4\tikzmark{4}) = 2 \times 3 + 2 \times 4 = 6 + 8 = 14 \]
+
+\begin{tikzpicture}[overlay, remember picture]
+\upcomarrow{a}{b}{distance=0.5cm,red}
+\upcomarrow{a}{c}{distance=0.8cm,red}
+\upcomarrow{2}{3}{distance=0.5cm,red}
+\upcomarrow{2}{4}{distance=0.8cm,red}
+\end{tikzpicture}
+
+\paragraph{P5) Distributiva na Subtração}
+
+Multiplicamos o número que está fora dos parenteses pelo que está dentro porém subtraindo. Mantemos o sinal do número que é negativo.
+
+\[ a\tikzmark{a} \cdot (b\tikzmark{b} - c\tikzmark{c}) = a \cdot b - a \cdot c \]
+
+\[ 2\tikzmark{2} \cdot (3\tikzmark{3} - 4\tikzmark{4}) = 2 \cdot 3 - 2 \cdot 4 = 6 - 8 = -2 \]
+
+\begin{tikzpicture}[overlay, remember picture]
+\upcomarrow{a}{b}{distance=0.5cm,red}
+\upcomarrow{a}{c}{distance=0.8cm,red}
+\upcomarrow{2}{3}{distance=0.5cm,red}
+\upcomarrow{2}{4}{distance=0.8cm,red}
+\end{tikzpicture}
+
+\subsection{Exemplo de Problema}
+
+O produto de dois números é 15. Somando 10 unidades ao menor desses fatores, o produto passa a ser igual a 65. O maior desses fatores é:
+
+\begin{align}
+a \times b &= 15 \\
+(a+10) \times b &= 65 \\
+a \times b + 10b &= 65 \\
+15 + 10b &= 65 \\
+10b &= 65 - 15 \\
+10b &= 50 \\
+b &= \frac{50}{10} \\
+b &= 5
+\end{align}
+
+\vspace{0.5em}
+
+\begin{itemize}
+\item Neste caso, assumimos que \(a\) é o valor menor e \(b\) é o valor maior apenas por convenção (1.2).
+\item Aplicamos a propriedade distributiva na soma, multiplicando \(b\) por \(a\) e depois por 10 (1.3).
+\item Sabemos que \(a \times b = 15\) portando substuimos \(a \times b\) por 15 (1.4).
+\item Entramos em uma equação de primeiro grau o número passa para o outro lado com sinal trocado \(15\) passa a ser \(-15\) (1.5). 
+\item Basta passarmos o \(10\) dividindo (1.7).
+\end{itemize}
+
+Agora sabemos que \(b = 5\) e \(a = 3\).
+
+\section{Exponenciação}
+
+É uma operação matemática que expressa o produto de vários fatores iguais. É como uma \textbf{Multiplicação}, porém o fator é multiplicado por ele mesmo quantas vezes o expoente determinar.
+
+Exemplo:
+
+\[
+2 \times 2 \times 2 = 2^{3}
+\]
+\[
+3 \times 3 = 3^{2}
+\]
+\[
+4^5 = 4 \times 4 \times 4 \times 4 \times 4
+\]
+
+\[ a^{n} = \underbrace{a \times a \times \ldots \times a}_{n \text{ vezes}} \]
+
+\subsection{Nomenclatura}
+
+\[
+\text{Expoente}
+\begin{array}{c}
+\\
+2^{3}\\
+\\
+\text{Base}
+\end{array}
+\]
+
+\subsection{Propriedades}
+
+\paragraph{Multiplicação de potências de mesma base}
+
+\[
+a^m \cdot a^n = a^{m+n}
+\]
+
+\[
+2^{2} \cdot 2^{3} = 2^{2+3} = 2^{5}
+\]
+
+Divisão de potências de mesma base
+
+\[
+\dfrac{a^m}{a^n} = a^{m - n}
+\]
+
+\[
+3^{5} \div 3^{2} = 3^{5-2} = 3^{3}
+\]
+
+Potência de potência
+
+\[
+(a^m)^n = a^{m \cdot n}
+\]
+
+\[
+(2^{2})^{3} = 2^{2 \cdot 3} = 2^{6}
+\]
+
+Potência em radiciação
+
+\[
+\sqrt[m]{a^n} = a^{\dfrac{n}{m}}
+\]
+
+\[
+\sqrt[3]{5^2} = 5^{\dfrac{2}{3}}
+\]
+
+Expoente negativo
+
+\[
+a^{-n} = \dfrac{1}{a^n}
+\]
+
+\[
+3^{-2} = \dfrac{1}{3^{2}} = \dfrac{1}{9}
+\]
+
+Expoente negativo em parênteses
+
+\[
+\left(\dfrac{a}{b}\right)^{-n} = \left(\dfrac{b}{a}\right)^{n}
+\]
+
+\[
+\left(\dfrac{3}{5}\right)^{-2} = \left(\dfrac{5}{3}\right)^{2}
+\]
+
+Não sei
+
+\[
+(a \cdot b)^{m} = a^{n} \cdot b^{n}
+\]
+
+\[
+(2 \cdot 3)^{3} = 2^{3} \cdot 5^{3}
+\]
+\[
+(3\sqrt{2})^{2} = 3^{2} \cdot (\sqrt{2})^{2} = 3 \cdot 2 = 6
+\]
+
+Divisão
+
+\[
+\left(\dfrac{a}{b}\right)^{n} = \dfrac{a^{n}}{b^{n}}
+\]
+
+Expoente 1 ou 0
+
+\[
+a^{1} = a
+\]
+\[
+a^{0} = 1 \leftrightarrow b \neq 0
+\]
+\[
+a^{0} = \text{indeterminado} \, | \, \text{\textyen}
+\]
+
+\paragraph{Exemplos}
+
+a) A terça parte de \(3^{10}\) é igual a:
+
+\begin{align}
+\dfrac{3^{10}}{3} &= 3^{10} \div 3^{1} \\
+3^{10-1} &= 3^{9}
+\end{align}
+
+
+Como estamos falando da terça parte estamos falando de \(\dfrac{3^{10}}{3}\) portanto podemos simplificar como \(3^{10} \div 3\). Neste caso entramos em uma divisão de potencias, pois todo o 3 é elevado a 1 mesmo que não esteja explicito. E em uma divisão de potência de mesma base como vimos nas propriedades, mantem a base e subtrai os expoentes
+.
+
+\vspace{0.5em}
+\paragraph{b) O valor da expressão \(10^{5} \cdot 10^{3} \div 10^{4}\)}
+
+\[
+10^{5+3} \div 10^{4}
+\]
+\[
+10^{8} \div 10^{4}
+\]
+\[
+10^{8-4}
+\]
+\[
+10^{4}
+\]
+
+\paragraph{c) Coloque em ordem crescente as potências \(a = 13^{50}\), \(b= 4^{100}\), \(c = 2^{250}\)}
+
+Neste caso, temos que igualar as potências para comparar as bases.
+
+\[
+b = 4^{100} = 4^{2 \cdot 50} = (4^{2})^{50} = 16^{50}
+\]
+\[
+c = 2^{250} = 2^{5 \cdot 50} = (2^{5})^{50} = 32^{50}
+\]
+\[
+a = 13^{50}
+\]
+
+Crescente é do menor para o maior, portanto:
+
+\[
+a < b < c
+\]
+
+Potências de números negativos
+
+1 Caso) Expoente par:
+
+\[
+(-2)^{2} = (-2) \cdot (-2) = +4
+\]
+
+2 Caso) Expoente ímpar:
+
+\[
+(-2)^{3} = (-2) \cdot (-2) \cdot (-2) = -8
+\]
+
+Importante:
+
+\[
+(-2)^{2} \neq -2^{2}
+\]
+\[
+-2^{2} = -1.(2)^{2} = -1 \cdot 4 = -4
+\]
+
+Notação científica (número \(x \times 10^{n}\))
+
+Em notação científica, o número precisa ser maior ou igual a 1 e menor que 10.
+
+\[
+1 \leq x < 10
+\]
+
+Portanto, o que precisamos fazer é apenas mover a vírgula de lugar e representar o número multiplicado por \(10\) elevado ao número de casas movidas.
+
+\[
+a \times 10^{n}
+\]
+
+O número do expoente da base \(10\) está relacionado ao número de casas que você andou, e para definir o sinal do expoente, usamos a direção com que movemos a vírgula: para a direita é negativo, para a esquerda é positivo:
+
+\[
+\rightarrow \, (-)
+\]
+\[
+\leftarrow \, (+)
+\]
+
+Exemplo:
+
+a) \(0,00012\)
+
+\[
+0,0001\underline{2}
+\]
+
+Andamos \(4\) casas com a vírgula para a esquerda, portanto:
+
+\[
+1,2 \times 10^{-4}
+\]
+
+b) \(0,005214\)
+
+\[
+0,005\underline{214}
+\]
+
+Andamos \(3\) casas com a vírgula para a esquerda, portanto:
+
+\[
+5,214 \times 10^{-3}
+\]
+
+c) \(230000000\)
+
+\[
+2,3\underline{0000000}
+\]
+
+Neste caso, consideramos que a vírgula está no final do número.
+
+Andamos \(8\) casas com a vírgula para
+
+
+\section{Radiciação}
+
+É a operação inversa da \textbf{Potenciação}.
+
+\[\sqrt[m]{a} = b \leftrightarrow b^{m} = a\]
+
+\subsection{Nomenclatura}
+\[m = \text{índice,}\]
+\[a = \text{radicando,}\]
+\[\sqrt{} = \text{radical,}\]
+\[b = \text{raiz.}\]
+
+\[\sqrt[3]{27} = 3 \leftrightarrow 3^{3} = 27\]
+\[\sqrt{4} = 2 \leftrightarrow 2^{2} = 4\]
+
+Quando não há um índice, subentende-se que é 2.
+
+\subsection{Propriedades}
+\begin{enumerate}
+    \item \(\sqrt[n]{a^{p}} \leftrightarrow a^{\dfrac{p}{n}}\)
+        \begin{itemize}
+            \item \(\sqrt[3]{3^{2}} = 3^{\dfrac{2}{3}}\)
+            \item \(\sqrt[5]{3^{2}} = 3^{\dfrac{2}{3}}\)
+        \end{itemize}
+    
+    \item \(\sqrt[n]{a \cdot b} = \sqrt[n]{a} \cdot \sqrt[n]{b}\)
+        \[\sqrt{9 \cdot 16} = \sqrt{9} \cdot \sqrt{16} = 3 \cdot 4 = 12\]
+    
+    \item \(\sqrt[n]{\dfrac{a}{b}} = \dfrac{\sqrt[n]{a}}{\sqrt[n]{b}}\)
+        \[\sqrt[3]{\dfrac{8}{27}} = \dfrac{\sqrt[3]{8}}{\sqrt[3]{27}} = \dfrac{\sqrt[3]{2^{3}}}{\sqrt[3]{3^{3}}} = \dfrac{2}{3}\]
+    
+    \item \(\sqrt[n]{\sqrt[m]{a}} = \sqrt[m \cdot n]{a}\)
+        \[\sqrt[3]{\sqrt{7}} = \sqrt[3 \cdot 2]{7} = \sqrt[6]{7}\]
+    
+    \item \(\sqrt[n]{a^{m}} = \sqrt[n \cdot p]{a^{m \cdot p}}\)
+        \[\sqrt[3]{2^{2}} = \sqrt[3 \cdot 2]{2^{2 \cdot 2}}\]
+    
+    \item \(\sqrt[n]{-a^{+n}}\)
+        \begin{itemize}
+            \item \(\sqrt[4]{-(2)^{4}} \neq -2\)
+            \item \(\sqrt[4]{-(2)^{4}} = \lvert -2 \rvert = 2\)
+            \item \(\sqrt[2]{-(3)^{2}} \neq -3\)
+            \item \(\sqrt[2]{-(3)^{2}} = \lvert -3 \rvert = 3\)
+        \end{itemize}
+\end{enumerate}
+
+Números com raízes invertidas não são parte do conjunto dos números reais; portanto, não existem.
+\[\sqrt{-9} = \nexists\]
+
+% Comparar o valor de raízes
+Coloque em ordem crescente os radicais abaixo:
+\[\sqrt[2]{2};\sqrt[3]{3};\sqrt[6]{4}\]
+
+Primeiro, nivelamos os índices usando o \textbf{MMC}:
+\[
+\begin{array}{c|ccc}
+& 6 & 3 & 2 \\
+\hline
+2 & 3 & 3 & 1 \\
+3 & 1 & & \\
+\end{array}
+\]
+\(MMC(6,3,2) = 2^{1} \times 3^{1} = 6\)
+
+Transformamos todos os índices em 6 multiplicando os índices e os expoentes dos radicandos pelo mesmo valor:
+\[\sqrt[2]{2};\sqrt[3]{3} = \sqrt[2 \cdot 3]{2^{1 \cdot 3}};\sqrt[3 \cdot 2]{3^{1 \cdot 2}} = \sqrt[6]{8};\sqrt[6]{9}\]
+
+E como \(\sqrt[6]{4}\) já está com índice 6, não fazemos nada aqui.
+Portanto:
+\[\sqrt[6]{4} < \sqrt[6]{8} < \sqrt[6]{9}\]
+
+% Calcular o valor da raiz
+a) \(\sqrt[2]{20}\)
+
+Tiramos o \textbf{MMC} de 20:
+\[
+\begin{array}{c|ccc}
+& 20\\
+\hline
+2 & 10\\
+2 & 5 & \\
+5 & 1
+\end{array}
+\]
+Como o índice é 2, pegamos os valores em grupos de 2, ficando \(2^{2} \cdot 5\). Para calcular, aplicamos a propriedade \textbf{b)}:
+\[\sqrt{20} = \sqrt[2]{2^{2} \cdot 5} = \sqrt[2]{2^{2}} \sqrt[2]{5} = 2\sqrt{5}\]
+
+b) \(\sqrt{108}\)
+\[
+\begin{array}{c|ccc}
+2 & 108\\
+\hline
+2 & 54\\
+3 & 27 & \\
+3 & 9 \\
+3 & 3 \\
+  & 1
+\end{array}
+\]
+Como o índice é 2, pegamos os valores em grupos de 2, ficando \(2^{2} \cdot 3^{2} \cdot 3\). Para calcular, aplicamos a propriedade \textbf{b)}:
+\[\sqrt{108} = \sqrt{2^{2} \cdot 3^{2} \cdot 3} = \sqrt{2^{2}} \sqrt{3^{2}} \sqrt{3} = 2 \cdot 3 \sqrt{3} = 6\sqrt{3}\]
+
+d) \(\sqrt[3]{216}\)
+\[
+\begin{array}{c|ccc}
+2 & 216\\
+\hline
+2 & 108\\
+2 & 54 & \\
+3 & 27 \\
+3 & 9 \\
+3 & 3 \\
+  & 1
+\end{array}
+\]
+Como o índice é 3, pegamos os valores em grupos de 3, ficando \(2^{3} \cdot 3^{3}\). Para calcular, aplicamos a propriedade \textbf{b)}:
+\[\sqrt[3]{216} = \sqrt[3]{2^{3} \cdot 3^{3}} = \sqrt[3]{2^{3}} \cdot \sqrt[3]{3^{3}} = 2 \cdot 3 = 6\]
+
+% Adição e Subtração com radicais
+a) \(2\sqrt{3} + 3\sqrt{3}\)
+
+Somamos os fatores externos mantendo a raiz, pois os radicais são iguais:
+\[2\sqrt{3} + 3\sqrt{3} = 5\sqrt{3}\]
+
+b) \(\sqrt{18} - \sqrt{8}\)
+
+Os radicais são diferentes, então tiramos o \textbf{MMC}:
+\[
+\begin{array}{c|ccc}
+  & 18 &\\
+\hline
+2 & 9 &\\
+3 & 3 &\\
+3 & 1
+\end{array}
+\]
+Assim, \(18 = 2 \cdot 3^{2}\):
+\[\sqrt{18} = \sqrt{2 \cdot 3^{2}} = \sqrt{2} \cdot \sqrt{3^{2}} = 3\sqrt{2}\]
+
+Agora, para \(8\):
+\[
+\begin{array}{c|ccc}
+ 2 & 8 &\\
+\hline
+2 & 4 &\\
+2 & 2 &\\
+ & 1
+\end{array}
+\]
+Então, \(8 = 2^{2} \cdot 2\):
+\[\sqrt{8} = \sqrt{2^{2} \cdot 2} = \sqrt{2^{2}} \cdot \sqrt{2} = 2\sqrt{2}\]
+
+A operação de subtração de raízes agora fica:
+\[\sqrt{18} - \sqrt{8} = 3\sqrt{2} - 2\sqrt{2} = 1\sqrt{2} = \sqrt{2}\]
+
+c) \(\sqrt[3]{16} + 4\sqrt[3]{2}\)
+\[
+\begin{array}{c|ccc}
+ 2 & 16 &\\
+\hline
+2 & 8 &\\
+2 & 4 &\\
+2 & 2 \\
+  & 1
+\end{array}
+\]
+Como o índice é 3, pegamos os valores em grupos de 3, ficando \(2^{3} \cdot 2\):
+\[\sqrt[3]{16} = \sqrt[3]{2^{3} \cdot 2} = \sqrt[3]{2^{3}} \cdot \sqrt[3]{2} = 2\sqrt[3]{2}\]
+
+Então,
+\[2\sqrt[3]{2} + 4\sqrt[3]{2} = 6\sqrt[3]{2}\]
+
+\section{Números Decimais}
+
+São números que possuem vírgulas. A vírgula separa a parte inteira da parte decimal.
+
+\[\text{Parte inteira} \leftarrow 1,|25 \rightarrow \text{Parte decimal}\]
+
+\paragraph{Leitura de um número decimal:}
+\par
+
+A leitura de números decimais consiste em pronunciar a parte inteira seguida da parte decimal, que possui sua nomenclatura diferente dos números inteiros de acordo com o número de casas após a ",".
+
+\begin{enumerate}
+\item décimos.
+\item centesimos.
+\item milesimos.
+\item decimos de milesimos.
+\item centesimos.
+\end{enumerate}
+
+
+a)2,9 = Dois inteiros e nove décimos.
+
+\vspace{0.5em}
+
+b)7,35 = Sete inteiros e trinta e cinco centésimos.
+
+\vspace{0.5em}
+
+c)15,124 = quinze inteiros e cento e vinte e quatro milésimos.
+
+\vspace{0.5em}
+
+\subsection{Transformação de fração decimal em número decimal}
+
+Para transformar de fração decimal para número decimal o denominador precisa ser uma potencia de 10. Sendo assim basta voltar sempre uma casa para cada 0 presente.
+
+Exemplos:
+
+\vspace{0.5em}
+
+a)\(72 \div 10 = 7,2\)
+
+\vspace{0.5em}
+
+b)\(234 \div 100 = 2,34\)
+
+\vspace{0.5em}
+
+c)\(5 \div 1000 = 0,005\)
+
+\subsection{Transformação de número decimal em fração decimal}
+
+Para de decimal para fração decimal o denominador precisa ser uma potencia de 10. Sendo assim basta o número de zeros do denominador vai ser igual a quantidade de números após a vírgula. Se há 2 números após a virgula o denominador será 100. Se há apenas um 1 o denominador será 10 e se 3 será 100 e assim por diante.
+  
+Exemplo:
+
+\vspace{0.5em}
+
+a)\(24,75 = \dfrac{2475}{100}\)
+
+\vspace{0.5em}
+
+b)\(325,7 = \dfrac{3257}{10}\)
+
+\vspace{0.5em}
+
+c)\(3,081 = \dfrac{3081}{1000}\)
+
+\subsection{Propriedade fundamental dos números decimais}
+
+Um número decimal não se altera quando se acrescenta ou se suprime um ou mais zeros à direita de sua parte decimal.
+
+\[1,2 = 1,20 = 1,200\]
+
+
+\subsection{Operação com números decimais}
+
+Adição
+
+Vírgula em baixo de vírgula
+
+a)\(6,5 + 21,48 + 0,061 =\)
+
+Subtração
+
+b)\(70,8 - 6,41\)
+
+Multiplicação de números decimais
+
+Ignora a vírgula, conta o número de casas decimais e então então anda as casas e insere a vírgula
+
+Exemplo
+
+c)\(1,02\times1,02\)
+
+
+\(102(100+2) = 10200 + 204\)
+
+Usando a propriedade distributiva da [[Multiplicação]] realizamos o calculo ignorando a vírgula.
+
+Dado o resultado observamos quantas casa decimais temos 1,02 tem 2 casas decimais logo teremos 4 portanto
+
+\[10404 = 1,4404\]
+
+Exemplo 2:
+
+d)\(0,25 \times 0,3 \times 0,4 =\)
+
+$25 \times 3 \times 4 = 300$ 
+
+Temos 4 números nas casas decimais
+
+$300 = 00,300 = 0,03$
+
+Lembrando da propriedade fundamental podemos eliminar os zeros sobressalentes.
+
+Divisão de números decimais
+
+\begin{itemize}
+\item Iguala-se as casas decimais, vírgula em cima de vírgula.
+\item Adiciona zero onde é necessário para igualar as casas.
+\item Então ignora a vírgula e realiza o calculo como se fosse um inteiro.
+\end{itemize}
+
+e)\(3,18 \div 0,5\)
+
+\[
+\dfrac{3,18}{0,5} \rightarrow
+\dfrac{3,18}{0,50} \rightarrow
+\dfrac{318}{50} \rightarrow
+318 \div 50 = 6,36 \rightarrow
+\]
+
+f)$0,468 \div 3,120$
+
+\[
+\dfrac{0,468}{3,120} \rightarrow
+\dfrac{468}{3120} \rightarrow
+486 \div 3120 = 0,15
+\]
+
+\paragraph{TODO representação melhorada}
+
+
+\section{Aritmetica}
+
+\subsection{Ordem das operações}
+
+Expressões numéricas são conjuntos de números que sofrem operações matemáticas através de uma ordem preestabelecida.
+
+\paragraph{Ordem nas Expressões Numéricas}
+
+\begin{enumerate}
+\item Parenteses
+\item Colchetes 
+\item Chaves
+\item Potência ou Raiz,
+\item Multiplicação ou divisão 
+\item Soma ou subtração 
+\end{enumerate}
+
+\subsection{Regra dos Sinais}
+
+a) +7 + 3 = +10
+
+b) +7 - 3 = +4
+
+c) -7 - 3 = -10
+
+d) -7 + 3 = -4
+
+
+O sinal sempre pertence ao número que está situado a sua direita.
+
+a) 3414 + 531 = 3945
+
+b) 79753 + 2589 = 82342
+
+c) 3637 - 294 = 3343
+
+d) 4548 - 1659 = 2889
+
+\paragraph{Sinais iguais = Positivo (+)}
+\paragraph{Sinais diferentes = Negativo (-)}
+
+
+\begin{align}
+(+).(+) = (+)\\
+(+).(-) = (-)\\
+(-).(+) = (-)\\
+(-).(-) = (+)\\
+\end{align}
+
+a)\((+2)\times(+3)=+6\)
+
+b)\((+2)\times(-3)=-6\)
+
+c)\((-8)\div(+2)=-4\)
+
+d)\((-8)\div(-2)=+4\)
+
+\section{Produtos Notaveis}
+
+Produtos Notáveis é uma formula para a propriedade distributiva da [[Multiplicação]] em conjunto com a propriedade da [[Potenciação]].
+
+Resolvendo através das propriedades.
+
+\[(x+2)^{2} = (x+2)(x+2) =\] \[x^{2}+2x+2x+4=x^{2}+4x+4\]
+
+Podemos resolver usando produtos notáveis
+
+$(x + 2)^{2}=x^{2}+2x \cdot 2 + 2^{2} = x^{2} + 4x + 4$
+
+Neste caso usamos o produto notável do quadrado da soma
+
+\subsection{Quadrado da Soma}
+
+O quadrado da soma de dois termos é igual ao quadrado do primeiro termo mais duas vezes o produto do 1 primeiro pelo 2 segundo termo, mais o quadrado do segundo termo.
+
+$(a + b)^{2} = a^{2} + 2 \cdot a \cdot b + b^{2}$ 
+
+Pode parecer confuso de início, mas é realmente importante aprendermos essa fórmula.
+
+a)$(x+3)^{2} = x^{2} + 2 \cdot x \cdot 3 + 3^{2} = x^{2} + 6x + 9$
+
+Vale salientar que quando temos neste caso $2 \cdot x \cdot 3$
+mantém o $x$ e multiplica-se os números $2 \cdot x \cdot 3 = 6x$
+
+b)$(2x+3)^{2} = (2x)^{2} + 2 \cdot 2x \cdot 3 + 3^{2}$
+
+Usando as propriedades potenciação sabemos que $(2x)^{2} = 2^{2} \cdot x^{2} = 4x^{2}$.
+
+$4x^{2} + 4x \cdot 3 + 3^{2}$
+
+Lembrando que mantemos o $x$ e multiplicamos os números
+
+$4x^{2} + 12x + 9$
+
+\subsection{Quadrado da diferença}
+
+O quadrado da diferença de dois termos é igual ao quadrado do primeiro termo menos duas vezes o produto do 1 primeiro termo pelo 2 segundo, mais o quadrado do segundo termo
+
+$(a - b)^{2} = a^{2} - 2 \cdot a \cdot b + b^{2}$
+
+Se você perceber é a mesma coisa que o quadrado da soma porém o primeiro termo ao quadrado é subtraído ao invés de ser somado.
+
+Repare que os sinais também são ignorados, apesar de -b está negativo o que nos interessa e somente o seu valor numérico.
+
+a)$(x-4)^{2} = x^{2} - 2 \cdot x \cdot 4 + 4^{2} = x^{2} - 8x + 16$
+
+b)\((3x - 1)^{2} = (3x)^{2} - 2 \cdot 3x \cdot 1 - 1^{2} = 3^{2} \cdot x^{2} - 6x = 9x^{2} - 6x + 1\)
+
+Lembre-se da propriedade da potência.
+
+\[(3x)^{2} = 3^{2} \cdot x^{2}\]
+
+\subsection{Produto da soma pela diferença} de dois termos
+
+O produto da soma pela diferença de dois termos é igual ao quadrado do primeiro termo menos o quadrado do segundo termo.
+
+\[(a + b)(a - b) = a^{2} - b^{2}\]
+
+
+a)\((x + 5)(x - 5) = x^{2}-5^{2}\)
+
+b)\((x + 2y)(x - 2y) = x^{2} - (2y)^{2} = x^{2} - 4y^{2}\)
+
+
+\paragraph{Exemplo}
+
+a) O valor numérico da expressão \((3 + \sqrt{5})(3-\sqrt{5})\) é:
+
+Neste caso como podemos ver é o produto da soma pela diferença pois 
+\(\overbrace{(3 + \sqrt{5})}^{Soma}\overbrace{\cdot}^{\text{Multiplicação}}\overbrace{(3-\sqrt{5})}^{\text{Diferença}}\), lembremos da formula
+
+\[(a + b)(a - b) = a^{2} - b^{2}\]
+\[(3 + \sqrt{5})(3-\sqrt{5}) = 3^{2} - \sqrt{5}^{2} = 9 - 5 = 4\]
+
+b) Se \(x^{2} + y^{2} = 5$ e $x \cdot y = 3\), então qual o valor de \((x-y)^{2}\) é:
+
+$(x-y)^{2}$ trata-se de um produto notável o produto da diferença lembremos da formula.
+
+\[(a - b) = a^{2} - 2 \cdot a \cdot b + b^{2}\]
+
+\[(x - y) = x^{2} - 2 \cdot x \cdot y + y^{2}\]
+
+Neste caso faremos uma pequena movimentação na operação, lembrando que isso não altera o resultado pois estamos usando a propriedade associativa da [[Adição]].
+
+\[(x-y) = x^{2} - y^{2} + 2 \cdot x \cdot y\]
+
+Movemos o \(y^{2}\) do final para junto do \(x^{2}\) agora basta substituirmos conforme o enunciado
+
+\[(x-y) = \underbrace{x^{2} - y^{2}}_{5} - 2 \cdot \underbrace{ x \cdot y}_{3} = 5 - 2 \cdot 3 = 5 - 6 = -1\]
+
+\subsection{Cubo da Soma de dois Termos}
+
+O cubo da soma de dois termos é igual ao cubo do primeiro, mais três vezes o produto do quadrado do primeiro pelo segundo, mais três vezes o produto do primeiro pelo quadrado segundo, mais o cubo do segundo.
+
+Pode parecer confuso a primeira vista. Mas na primeira simplificação veremos que não é tão difícil assim para isso quebraremos em partes. Para que facilite a leitura
+
+O cubo da soma de dois termos é igual ao:
+\begin{enumerate}
+\item Cubo do primeiro,
+\item mais três vezes o produto do quadrado do primeiro pelo segundo, 
+\item mais três vezes o produto do primeiro pelo quadrado segundo, 
+\item mais o cubo do segundo.
+\end{enumerate}
+
+\[(a+b)^{3} = \overbrace{a^{3}}^{1} + \overbrace{3 \cdot a^{2} \cdot b}^{2} + \overbrace{3 \cdot a \cdot b^{2}}^{3} + \overbrace{b^{3}}^{4}\]
+
+a)(x+1)
+
+\begin{align}
+(x+1)^{3} = x^{3} + 3 \cdot x^{2} \cdot 1 + 3 \cdot x \cdot 1^{2} + 1^{3}
+\\
+x^{3} + 3x^{2} + 3x + 1
+\end{align}
+
+b)(x + 2y)
+
+\begin{align}
+(x + 2y)^{3} = x^{3} + 3 \cdot x^{2} \cdot 2y + 3 \cdot x \cdot (2y)^{2} + (2y)^{3}
+\\
+x^{3} + 3 \cdot x^{2} \cdot 2y + 3 \cdot x \cdot 4 \cdot y^{2} + 8 \cdot y^{3}
+\\
+x^{3} + 3 \cdot x^{2} \cdot 2y + 3 \cdot x \cdot 4 \cdot y^{2} + 8 \cdot y^{3}
+\end{align}
+
+Agora utilizando a propriedade comutativa da multiplicação podemos simplificar ainda mais a operação juntando número com número letra com letra.
+
+\[x^{3} + 6x^{2}y + 12xy^{2} + 8y^{3}\]
+
+
+TODO representação
+
+\subsection{O Cubo da diferença de dois termos}
+
+"O cubo da diferença de dois termos é igual ao cubo do primeiro, menos três vezes o produto do quadrado do primeiro pelo segundo, mais três vezes o produto do primeiro pelo quadrado do segundo, menos o cubo".
+
+Novamente iremos quebrar em partes para que facilite nosso entendimento
+
+"O cubo da diferença de dois termos é igual ao 
+\begin{enumerate}
+\item cubo do primeiro, 
+\item menos três vezes o produto do quadrado do primeiro pelo segundo,
+\item mais três vezes o produto do primeiro pelo quadrado do segundo,
+\item menos o cubo".
+\end{enumerate}
+
+\[(a-b)^{3} = \overbrace{a^{3}}^{1} - \overbrace{3 \cdot a^{2} \cdot b}^{2} + \overbrace{3 \cdot a \cdot b^{2}}^{3} - \overbrace{b^{3}}^{4}\]
+
+a)(x-1)
+
+\begin{align}
+(x-1)^{3} = x^{3} - 3 \cdot x^{2} \cdot 1 + 3 \cdot x \cdot 1^{2} - 1^{3}
+\\
+(x-1)^{3} = x^{3} - 3 \cdot x^{2} \cdot 1 + 3 \cdot x \cdot 1 - 1 
+\\
+(x-1)^{3} = x^{3} - 3 \cdot x^{2} \cdot 1 + 3 \cdot x \cdot 1 - 1 
+\\
+(x-1)^{3} = x^{3} - 3x^{2} + 3x \ - 1
+\end{align}
+
+
+Lembramos de multiplicar o número e manter a letra 
+
+b)(3 - 2y)
+
+\begin{align}
+(3 - 2y)^{3} = 3^{3} - 3 \cdot 3^{2} \cdot 2y + 3 \cdot 3 \cdot (2y)^{2} - (2y)^{3}
+\\
+(3 - 2y)^{3} = 3^{3} - 3 \cdot 3^{2} \cdot 2y + 3 \cdot 3 \cdot 2^{2} \cdot y^{2} - 2^{3} \cdot y^{3}
+\\
+(3 - 2y)^{3} = 27 - 3 \cdot 9 \cdot 2y + 3 \cdot 3 \cdot 4 \cdot y^{2} - 8 \cdot y^{3}
+\\
+(3 - 2y)^{3} = 27 - 3 \cdot 9 \cdot 2y + 3 \cdot 3 \cdot 4 \cdot y^{2} - 8 \cdot y^{3} 
+\\
+(3 - 2y)^{3} = 27 - 54y + 36y^{2} - 8y^{3} 
+\end{align}
+
+Divisores
+
+São todos os números que dividem determinado número, ou seja, são os números que quando efetuamos a divisão por um determinado número o resto é zero.
+
+Exemplo
+
+D(2) = {-2, -1, 1, 2}
+D(3) = {-3, -1, 1, 3}
+D(4) = {-4, -2, -1, 1, 2, 4}
+
+Os divisores são finitos.
+
+Em termos matemáticos utilizamos o \(\mid\) para representar que um número é divisível por outro e \(\nmid\) para representar o inverso quando o número não é divisível por outro exemplo.
+
+\[50 \mid 10  \quad \text{e} \quad 50 \nmid 3\]
+
+50 é divisível por 10, mas não é divisível por 3
+
+\paragraph{Principais Critérios de divisibilidade}
+
+2 ao 6
+
+Por 2 - O número deve ser par.
+Por 3 - A soma dos algarismos do número deve ser um múltiplo de 3.
+Por 4 - O número deve terminar em "00" ou um dos dois últimos da direita devem formar um múltiplo de 4.
+Por 5 - O Número deve terminar em zero ou cinco.
+Por 6 - O Número deve ser divisível por 2 e por 3 ao mesmo tempo.
+
+Exemplo:
+
+918 é divisível por qual dos números anteriores?
+
+Por 2. 918 é par:
+\[918 \mid 2\]
+
+Por 3. 1 + 8 + 9 = 18 é múltiplo de 3: 
+\[918 \mid 3\]
+
+Por 4. 918 Não termina em 00, e 18 não é múltiplo de 4: 
+\[918 \nmid 4\]
+
+Por 5. 918 não termina em 0 ou 5:
+\[918 \nmid 5\]
+
+Por 6. 918 é divisível por 3 por 2 ao mesmo tempo:
+\[918 \mid 6\]
+
+Por 7
+
+O número é divisível por 7 quando seu último quando o seu último algarismo multiplicado por 2 menos o que sobrou é múltiplo de 7.
+
+Exemplo:
+
+a) 14
+
+1. 14 nós o ultimo algarismo 4 e multiplicamos por 2 = 8
+2. Subtraímos do que restou que é 1.
+3. 1 - 8 = -7, -7 é múltiplo de 7 logo sabemos que 14 \(14 \mid 7\)
+
+b) 252 
+
+1. Separamos o ultimo algarismo 2 e multiplicamos por 2 = 4.
+2. Subtraímos do que restou que é 25.
+3. 25 - 4 = 21, 21 é múltiplo de 5 logo \[252 \mid 7\]
+
+d) 2240
+
+1. Separamos o ultimo algarismo 0 e multiplicamos por 2 = 0.
+2. Subtraímos do que restou que é 224.
+3. 224 - 0 = 224, é difícil saber se 224 é múltiplo de 7 então repetimos o processo novamente com o 224.
+
+1. Separamos o ultimo algarismo 4 e multiplicamos por 2 = 8.
+2. Subtraímos do que restou que é 22.
+3. 22 - 8 = 14, 14 é múltiplo.
+
+Por 8
+
+O número é divisível por 8 quando termina em "000" ou quando o número é formado pelos três últimos algarismos da direita é divisível por 8.
+
+Exemplo:
+
+a) \(8000 \mid 8\) pois 8 termina em "000".
+b) 46104 
+
+Nós pegamos os três últimos algarismos e dividimos.
+
+
+104 | 8
+
+Por 9
+
+O número é divisível por 9 quando a soma dos seus algarismos é divisível por 9.
+
+Divisores de um número 
+
+Para encontrar os divisores de um número aplicaremos um sistema utilizando o [[MMC (Mínimo Múltiplo Comum)]]
+
+\subsection{Quantidade de divisores de um número}
+
+Para encontrarmos quantos divisores um número tem devemos utilizar o [[MMC (Mínimo Múltiplo Comum)]] e transformar o número em fatores primos. Então iremos somar +1 aos [[Potenciação|Expoentes]]destes números e multiplicaremos os expoentes resultando no total de divisores do número.
+
+Exemplo
+
+a) 4 
+
+1. Tiramos o [[MMC]]
+
+\[
+\begin{array}{c|ccc}
+4 & 2 \\
+2 & 2 \\
+1 &   \\
+\end{array}
+\]
+
+2. Transformamos o número em um fator primo
+
+\[2 \cdot 2 = 2^{2}\]
+
+3. Somamos \(+1\) ao expoente
+
+\[2^{2+1} = 2^{3}\]
+	
+4. Como não temos outro número para multiplicar o resultado fica sendo 3.
+
+a) 15
+
+1. Tiramos o [[MMC]]
+
+\[
+\begin{array}{c|ccc}
+15 & 3 \\
+5 & 5 \\
+1 &   \\
+\end{array}
+\]
+
+2. Transformamos o número em um fator primo, neste caso permanece como está.
+
+\[3 \cdot 5 = 3 \cdot 5\]
+
+3. Somamos \(+1\) ao expoente lembrando que quando nãop temos nada é 1.
+
+\[2^{2+1} = 3^{1+1}\cdot 5^{1+1} = 3^{2}\cdot 5^{2}\]
+
+4. Multiplicamos os expoentes.
+
+\[2 \cdot 2 = 4\]
+
+Portanto temos 4 números que dividem 15
+
+a) 36
+
+1. Tiramos o [[MMC]]
+
+\[
+\begin{array}{c|ccc}
+36 & 2 \\
+18 & 2 \\
+9  & 3 \\
+3  & 3 \\
+1
+\end{array}
+\]
+
+2. Transformamos o número em um fator primo.
+
+\[2 \cdot 2 \cdot 3 \cdot 3 = 2^{2} \cdot 3^{2}\]
+
+3. Somamos \(+1\) ao expoente.
+
+\[2^{2+1} \cdot 3^{2+1} = 2^{3} \cdot 3^{3}\]
+
+4. Multiplicamos os expoentes.
+	\[3 \cdot 3 = 9\]
+
+Portanto temos 9 números que dividem 26
+
+a) 54 
+
+1. Tiramos o [[MMC]]
+
+\[
+\begin{array}{c|ccc}
+54 & 2 \\
+27 & 3 \\
+9  & 3 \\ 
+3  & 3 \\
+1 
+\end{array}
+\]
+
+2. Transformamos o número em um fator primo
+
+\[2 \cdot 3 \cdot 3 \cdot 3 = 2 \cdot 3^{3}\]
+
+3. Somamos \(+1\) ao expoente
+
+\[2^{1+1} \cdot 3^{3+1} = 2^{2} \cdot 3^{4}\]
+
+4. Multiplicamos os expoentes.
+
+\[2 \cdot 4 = 8\]
+
+Portanto temos 8 números que dividem 26
+
+É o maior número que divide os números dados exatamente. Se não houver nenhum número que os divida, além da unidade, o maior divisor comum é 1 e os números considerados são primos entre si [[MMC]].
+
+Exemplo:
+
+\[D(12) = {1,2,3,4,6,12}\]
+
+\[D(6) = {1,2,3,6}\]
+
+\[MDC(6,12) = 6\]
+
+Pois é o maior número que divide os dois.
+
+Exemplo:
+
+\[D(4) = {1,2,4}\]
+
+\[D(5) = {1,5}\]
+
+O único número que divide os dois é 1. Logo é considerado primos entre si.
+
+Para encontrarmos o MDC entre dois números é bastante similar ao [[MMC]], porém o número que for dividir deve dividir todos os números que estão neste processo, caso não seja possível paramos ali mesmo. E como no [[MMC]] tiramos o produto dos fatores.
+
+\[MDC(12, 18) = 2 \cdot 3 = 6\]
+
+\[
+\begin{array}{cc|cc} 
+12, & 18 & 2 \\
+ 6, & 9  & 3 \\
+ 2, & 3  
+\end{array}
+\]
+
+\paragraph{Propriedades do MDC}
+
+O MDC entre dois números ou mais, em que os maiores são divisíveis pelo menor, é o menor número.
+
+Exemplo
+
+a) MDC(50,150) = 150
+b) MDC(70, 120, 280) = 70
+
+Multiplicando-se ou dividindo-se dois ou mais números por um mesmo número, o MDC entre eles ficara multiplicado ou divido, respectivamente por esse mesmo número
+
+Exemplo:
+
+\[\text{MDC} (24,36) = 2^{2} \cdot 3 = 12\]
+
+\[
+\begin{array}{cc|cc}
+24, & 36 & 2 \\
+12, & 18 & 2 \\
+6,  &  9 & 3 \\  
+2,  &  3 &  \\
+\end{array}
+\]
+
+1- Multiplicando-se os números por 4, \(24 \cdot 4 = 96, \quad 36 \cdot 4 = 144\) o MDC ficará multiplicado por 4.
+
+\[\text{MDC} (36,54) = 2^{4} \cdot 3= 48\]
+
+\[
+\begin{array}{cc|cc}
+96, & 144  & 2 \\
+48, & 72   & 2 \\
+24, & 36   & 2 \\  
+12, & 18   & 2 \\
+6,  &  9   & 3 \\
+2,  &  3
+\end{array}
+\]
+
+2- Dividindo-se os números por 6 o MDC ficará divido por 6.
+
+\[24 \div 4 = 6, \quad 36 \div 4 = 9\]
+
+\[\text{MDC}(6,9) = 3\]
+
+\[
+\begin{array}{cc|cc}
+6, & 9 & 3 \\
+2, & 3 & \\
+\end{array}
+\]
+
+O MMC de dois ou mais números inteiros é o menor número que é [[Múltiplos|múltiplo]] dos dois ao mesmo tempo. Com exceção do zero
+
+Exemplo:
+
+
+\[M(3) = \{3 \times 1 = 3,\, 3 \times 2 = 6,\, 3 \times 3 = 9,\, 3 \times 4 = 12, \ldots\}\]
+
+\[M(4) = \{4 \times 1 = 4,\, 4 \times 2 = 8,\, 4 \times 3 = 12,\,\ldots\}\]
+
+Como pode ver \(12\) é o o menor múltiplo comum entre \(3\) e \(4\) pois está presente nos dois ao mesmo tempo.
+
+Para encontrar o MMC dos número 6, 3 e 2, podemos usar o método de divisões sucessivas:
+
+\[
+\begin{array}{c|ccc}
+& 6 & 3 & 2 \\
+\hline
+2 & 3 & 3 & 1 \\
+3 & 1 & & \\
+\end{array}
+\]
+
+Onde pegamos o menor divisor possível possível que dívida qualquer um dos números presente na tabela, ao fim O MMC é o produto dos divisores, ou seja, \(2 \times 3 = 6\).
+
+Outra forma de calcular o MMC 
+
+Para calcular o MMC (Mínimo Múltiplo Comum) dos números 6, 3 e 2, primeiro, fatorize cada número em seus fatores primos:
+
+\[6 = 2 \times 3\]
+\[3 = 3\]
+\[3 = 3\]
+\[2 = 2\]
+
+Agora, para encontrar o MMC, tome os fatores primos distintos elevados ao maior expoente encontrado em suas respectivas fatorizações:
+
+\[MMC(6,3,2)=2^{1} \times 3^{1}= 6\]
+
+
+\subsection{Decomposição de um Número em Fatores Primos}
+
+Todo número múltiplo pode ser fatorado de uma maneira única em que um produto de fatores primos.
+
+Exemplos:
+
+A) 16
+
+\[
+\begin{array}{c|ccc}
+2 & 16 &\\
+\hline 
+2  & 8 \\
+2 & 4 \\
+2 & 2 \\
+& 1
+\end{array}
+\]
+
+Então multiplicamos os Multiplicação fatores em um produto de fatores primos e as propriedades da Radiciação. \(2\times 2 \times 2 \times 2 = 2^{4}\)
+
+Logo \(16 = 2^{4}\)
+
+B) 120
+
+\[
+\begin{array}{c|cc}
+2 & 120 & \\
+\hline
+2 & 60 \\
+2 & 30 \\
+3 & 15 \\
+5 & 5 \\
+  & 1
+\end{array}
+\]
+
+Então multiplicamos os [[Multiplicação|fatores]] em um produto de fatores primos e as propriedades da [[Radiciação]]. \(2\times 2 \times 2 \times 3 \times 5 = 2^{3} \cdot 3 \cdot 5\)
+
+Logo \[120 = 2^{3} \cdot 3 \cdot 5\]
+
+C) 360
+
+\[
+\begin{array}{c|ccc}
+2 & 360 \\
+\hline
+2 & 160 \\
+2 & 80 \\
+2 & 40  \\
+2 & 20 \\
+2 & 10 \\
+5 & 5  \\
+  & 1
+\end{array}
+\]
+
+Então multiplicamos os fatores em um produto de fatores primos e as propriedades da Radiciação. \[2 \times 2 \times 2 \times 2 \times 2 \times 2 \times 5 = 2^{6} \cdot 5\]
+
+Principais consequências do MMC
+
+O MMC entre dois números ou mais números, em que o maior é múltiplo dos menores, é o maior número.
+
+Exemplo
+
+a) MMC (60,240) = 240
+b) MMC (50, 200m 400) = 40
+
+Multiplicando-se ou dividindo-se dois ou mais números por um mesmo número, o MMC entre eles ficara multiplicado ou divido, respectivamente por esse mesmo número
+
+Exemplo:
+
+\[\text{MMC} (12,18) = 2^{2} \cdot 3^{2} =36\]
+
+\[
+\begin{array}{cc|cc}
+12, & 18 & 2 \\
+6,  &  9 & 2 \\
+3,  &  9 & 3 \\  
+1,  &  3 & 3 \\
+1,  &  1 
+\end{array}
+\]
+
+1- Multiplicando-se os números por 3, $12 \cdot 3 = 36, \quad 18 \cdot 3 = 54$ o MMC ficará multiplicado por 3.
+
+\[\text{MMC} (36,54) = 2^{2} \cdot 3^{3}= 108\]
+
+\[
+\begin{array}{cc|cc}
+36, & 54  & 2 \\
+18, & 27  & 2 \\
+9,  & 27  & 3 \\  
+3,  &  9  & 3 \\
+1,  &  3  & 3 \\
+1,  &   1
+\end{array}
+\]
+
+2- Dividindo-se os números por 6 o MMC ficará divido por 6.
+
+\[12 \div 6 = 2, \quad 18 \div 3 = 3\]
+
+\[\text{MMC}(2,3) = 2 \cdot 3 = 6\]
+
+\[
+\begin{array}{cc|cc}
+2, & 3 & 2 \\
+1, & 3 & 3 \\
+1, & 1,
+\end{array}
+\]
+   
+São todos os resultados possíveis da multiplicação desse número por todos e por cada um dos números naturais.
+
+Exemplo:
+
+m(4) = {... 4xo=0, 4x1=4, 4x2=8 4x3, 4x4=16 ...}
+
+O conjunto dos múltiplos é infinito.
+
+
+\section{Dízimas Períodicas}
+
+São números decimais em que há repetição periódica e infinita de um ou mais algarismos, esses algarismos que se repetem chamamos de período da dízima.
+
+A dízima periódica ocorre na divisão quando tentamos dividir um número que não é divisível por outro chegado em um decimal infinito.
+
+10/3 = 0,333...
+
+\subsection{Tipos de dízima periódicas}
+
+Simples
+
+Quando depois da vírgula só tem um número que se repete.
+
+Exemplo: 8,2323...
+
+Composta
+
+Quando depois da vírgula além do número que se repete existe outro, que chamamos de ante período.
+
+O ante período leva este nome, pois ele não se repete, ele não faz parte do período e ele precede o período.
+
+De momento guarde este conceito pois classificando as dízimas, tudo ficará claro quando decompormos as dízimas distinguindo suas partes e classificando-as.
+
+Exemplos:
+
+Lembrando do que vimos em Números Decimais, podemos separar a parte inteira da parte decimal. Mas neste caso, iremos um pouco além.
+
+\[\overbrace{4}^{\text{I = Inteiro}},\overbrace{3}^{\text{A = Ante período }}\overbrace{777}^{\text{ P = Período}}\ldots\]
+
+I=4, A=3, P=7
+
+Como podemos ver:
+
+1. A parte inteira seguida da vírgula.
+2. Então temos o ante período que precede o período e não se repete infinitamente como o período.
+3. Então temos o período que se repete infinitamente.
+
+Trata-se de uma dízima periódica composta, pois apresenta período.
+
+Representamos cada um com uma letra para facilitar nossa identificação. Isso será útil mais adiante.
+
+Em notação matemática, representamos o período com uma linha sobreposta ao número chamada de sobre-linha sobre o período. O número anterior pode ser representado da seguinte forma.
+
+\[4,3777\ldots = 4,3\overline{7}\]
+
+A linha sobre o 7 significa que ele é um período, e o 7 se repete infinitamente.
+
+Agora vamos decompor alguns números e representá-los com a notação matemática que acabamos de aprender.
+
+Exemplos
+
+a) \(0,3222...\)
+
+Primeiro vamos decompor e identificar suas partes.
+
+\[\overbrace{0}^{\text{I = Inteiro}},\overbrace{3}^{\text{A = Ante período }}\overbrace{222}^{\text{ P = Período}}\ldots\]
+
+I=0, A=3, P=2
+
+Agora vamos representar em notação matemática.
+
+\[0,3222\ldots = 0,3\overline{2}\]
+
+b) \(1,2424\ldots = 1,\overline{24}\)
+
+Primeiro vamos decompor e identificar suas partes.
+
+\[\overbrace{0}^{\text{I = Inteiro}},\overbrace{222}^{\text{P = Período}}\ldots\]
+
+I=0, P=2
+
+Neste caso, não temos ante período, apenas inteiro e período. Agora vamos representar em notação matemática.
+
+\[1,2424\ldots = 1,\overline{24}\]
+
+c) \(2,35464646...\)
+
+\[\overbrace{2}^{\text{I = Inteiro}},\overbrace{35}^{\text{A = Ante período }}\overbrace{46}^{\text{ P = Período}}\ldots\]
+
+Agora vamos representar em notação matemática.
+
+\[2,35464646\ldots = 2,35\overline{46}\]
+
+Acredito que com todos esses exemplos, você agora saiba decompor uma dízima periódica. Agora veremos o porquê isto é útil.
+
+\subsection{Geratriz de uma dízima Periódica}
+
+\subsubsection{Dízima Simples parte inteira igual a zero}
+
+Primeiro começaremos com uma dízima simples e depois para as compostas. Iremos construindo nosso conhecimento gradualmente.
+
+Geratriz não é nada mais que uma fórmula que possamos utilizar para transformar dízimas periódicas em frações. Para isso, seguimos um sistema bem simples.
+
+\[\dfrac{\text{Numerador}}{\text{Denominador}} = \dfrac{\text{Período}}{\text{Um 9 para cada algarismo do período}}\]
+
+Exemplo:
+
+a) \(0,222\ldots\)
+
+\[\overbrace{0}^{\text{I = Inteiro}},\overbrace{222}^{\text{P = Período}}\ldots\]
+
+I=0, P=2
+
+Denominador: Aplicando a fórmula que vimos anteriormente, vamos contar quantos algarismos temos no período. Neste caso, temos apenas 1, que é o "2", portanto, o denominador vai ser "9".
+
+Numerador: É o mesmo que o período, portanto, 2.
+
+\[0,\overline{2} = \dfrac{2}{9}\]
+
+b) \(1,131313...\)
+
+\[\overbrace{0}^{\text{I = Inteiro}},\overbrace{131313}^{\text{P = Período}}\ldots\]
+
+I=0, P=13
+
+Denominador: Aplicando a fórmula que vimos anteriormente, vamos contar quantos algarismos temos no período. Neste caso, temos "2" algarismos, o "1" e o "3", portanto, o denominador vai ser "99".
+
+Numerador: O numerador é o período, portanto, 113.
+
+\[\dfrac{113}{99}\]
+
+\subsubsection{Dízima Simples parte inteira diferente de zero}
+
+Não há muita diferença, aproveitamos do conhecimento que construímos anteriormente e apenas realizamos alguns ajustes.
+
+\[\dfrac{\text{Numerador}}{\text{Denominador}} = \dfrac{\text{Tudo - quem não é período}}{\text{Um 9 para cada algarismo do período}}\]
+
+A diferença agora é que o **Numerador** não é apenas o período, mas tudo. O que queremos dizer com tudo é a aglutinação, ou seja, nós juntamos os algarismos da parte inteira com os algarismos do período para formar um número.
+
+Exemplo:
+
+a) \(1,242424...\)
+
+\[\overbrace{1}^{\text{I = Inteiro}},\overbrace{242424}^{\text{P = Periodo}}\ldots\]
+
+I=1, P=24
+
+Numerador: Iremos aglutinar o inteiro que é 1, o ante período que é 3 e o período que é 5, formando assim 135.
+
+\[\overbrace{\overbrace{1}^{\text{Inteiro}},\overbrace{3}^{Anti-periodo }\overbrace{5}^{\text{Periodo}}}^{\text{Aglutinando: }135}\]
+
+E então subtraímos tudo que não é período. Temos o 1 que é o inteiro, portanto, 135-1 = 134.
+
+\[\dfrac{134}{?} = \dfrac{134}{?}\]
+
+Denominador: Permanece o mesmo conceito que tínhamos visto antes. Cada algarismo é igual a um 9. Temos 2 e 4, portanto, 99.
+
+\[\dfrac{134}{99}\]
+
+b) \(2,141414...\)
+
+\[\overbrace{2}^{\text{I = Inteiro}},\overbrace{141414}^{\text{P = Período}}\ldots\]
+
+I=2, P=14
+
+Numerador: Iremos aglutinar o inteiro que é 2, o ante período que é 14, formando assim 214.
+
+\[\overbrace{\overbrace{2}^{\text{Inteiro}},\overbrace{14}^{\text{Período}}}^{\text{Aglutinando: }214}\]
+
+E então subtraímos tudo que não é período. Temos o 2 que é o inteiro, portanto, 214-2 = 212.
+
+\[\dfrac{212}{?} = \dfrac{212}{?}\]
+
+Denominador: O período possui 2 algarismos, o 1 e o 4. Para cada algarismo, colocamos um 9, portanto, 99.
+
+\[\dfrac{212}{99}\]
+
+\subsubsection{Dízima Composta}
+
+Agora que vimos como lidar quando temos números inteiros, vamos praticar tudo que aprendemos no último cenário possível, que é a dízima periódica composta, que é quando temos ante período. Novamente, aproveitamos o conhecimento anterior e realizamos algumas alterações.
+
+\[\dfrac{\text{Numerador}}{\text{Denominador}} = \dfrac{\text{Tudo - quem não é período}}{\text{Um 9 para cada algarismo do período e um 0 para cada algarismo de ante período }}\]
+
+Exemplo:
+
+a) \(1,35555...\)
+
+\[\overbrace{1}^{\text{I = Inteiro}},\overbrace{3}^{\text{A = Ante período }}\overbrace{5555}^{\text{P = Período}}\ldots\]
+
+I=1, A=3, P=5
+
+Numerador: Iremos aglutinar o inteiro que é 1, o ante período que é 3, e o período que é 5, formando assim 135.
+
+\[\overbrace{\overbrace{1}^{\text{Inteiro}},\overbrace{3}^{Anti-periodo }\overbrace{5}^{\text{ Período}}}^{\text{Aglutinando: }135}\]
+
+E então subtraímos por tudo que não é período novamente, aglutinando-os temos o inteiro que é 1, o 3 que é o ante período, formando assim 13. Portanto, 135-13 = 122.
+
+\[\dfrac{135-13}{?} = \dfrac{122}{?}\]
+
+Denominador: Permanece o mesmo conceito que tínhamos visto cada algarismo do denominador é igual a um 9. Porém, para cada algarismo de ante período, acrescentamos um zero a mais também no final. Temos portanto um algarismo de período e um algarismo de ante período aglutinando-os, formasse 90.
+
+\[\dfrac{122}{90}\]
+
+b) \(3,0121212...\)
+
+\[\overbrace{3}^{\text{I=Inteiro}},\overbrace{0}^{\text{A=Ante-periodo}}\overbrace{121212}^{\text{P = Periodo}}\ldots\]
+
+I=3, A=0, P=12
+
+Numerador: Iremos aglutinar o inteiro que é 3, o ante período que é 0, e o período que é 12, formando assim 3012.
+
+\[\overbrace{\overbrace{3}^{\text{Inteiro}},\overbrace{0}^{Anti-periodo}\overbrace{12}^{\text{Periodo}}}^{\text{Aglutinando: }3012}\]
+
+E então subtraímos por tudo que não é período, novamente, aglutinando-os temos o inteiro que é 3 e o ante período que é 0, formando assim 30. Portanto, 3012-30 = 2982.
+
+\[\dfrac{3012-30}{?} = \dfrac{2982}{?}\]
+
+Denominador: Temos dois algarismos de período formando 99 e um algarismo de ante período aglutinando-os formasse 990.
+
+\[\dfrac{2982}{990} = \dfrac{2988 \div 2}{990 \div 2} = \dfrac{1491}{495}\]
+
+Simplificando, chegamos a este resultado.
+
+\section{Frações}
+
+A fração é nada mais que uma representação de uma divisão ou seja um número sendo divido por outro
+
+\[\dfrac{1}{3} = \dfrac{Numerador \quad (\mathbb{Z})}{Demoninador \quad (\mathbb{Z^{*}})}\]
+
+
+%TODO Desenhar barrinhas que representam proporção
+
+As frações representam quantas partes do montante total ela representa. Sendo o denominador o total e o numerador a parcela que queremos representar.
+
+\[\dfrac{1}{3}\]
+\[\dfrac{2}{3}\]
+
+\subsection{Tipos de Fração}
+
+\paragraph{Fração Propria:} Numerador menor que o denominador. 
+
+\[\text{Numerador} < \text{Denominador}\]
+\[\dfrac{2}{3} \quad \dfrac{4}{15}\]
+
+\paragraph{Fração Impropria:} Numerador é menor que o denominador.
+
+\[\text{Numerador} > \text{Denominador}\]
+\[\dfrac{5}{3} \quad \dfrac{7}{4}\]
+
+\paragraph{Fração Aparente:} São frações impróprias cujo o numerador é múltiplo do denominador
+
+São chamadas de aparente, pois as mesmas podem ser representadas por inteiros.
+
+\[Numerador > Denominador\]
+
+\[N \mid D \quad \text{Representando que N é multiplo de D}\]
+
+\[\dfrac{10}{2} = 2\]
+
+\[\dfrac{27}{9} = 3\]
+
+\paragraph{Fração equivalente:} Frações equivalentes são frações que possuem o mesmo valor que outra fração que ainda não foi simplificada.
+
+Veremos a simplificação mais a frente, mas é importante sabermos que as frações possuem equivalência, ou seja.
+Se \textbf{multiplicarmos} ou \textbf{dividirmos} o numerador e denominador pelo mesmo valor o valor da fração permanece o mesmo.
+
+\[\dfrac{1}{3} = \dfrac{1 \times 2}{3 \times 3} = \dfrac{2}{6}\]
+
+\[\dfrac{1}{3} = \dfrac{2}{6}\]
+
+1/3 é o mesmo que 2/6. O mesmo vale para a divisão
+
+\[\dfrac{4}{16} = \dfrac{4 \div 4}{16 \div 4} = \dfrac{1}{3}\]
+\[\dfrac{4}{16} = \dfrac{1}{3}\]
+
+4/16 tem o mesmo valor que 1/3. Por isso chamamos de fração equivalente pois o resultado de ambos é o mesmo.
+
+\subsection{Simplificação de Frações}
+
+A simplificação de frações não é nada mais que a divisão do numerador e do denominado pelo mesmo número. Até que não possa mais simplificar tendo assim dois números indivisíveis entre entre si. Para isso utilizaremos o Máximo Divisor Comum (MDC).
+
+\vspace{0.5em}
+
+Exemplo:
+
+A) \(24/36\)
+
+\[
+\begin{array}{cc|cc}
+24 & 36 & 2 \\
+12 & 18 & 2 \\
+6  & 9  & 3 \\
+2  & 3 
+\end{array}
+\]
+
+\[2 \times 2 \times 3 = 12\]
+
+\vspace{0.5em}
+
+Agora sabendo que o máximo divisor comum destes números podemos iremos dividir ambos por ele
+
+\[\dfrac{24 \div 12}{36 \div 12} = \dfrac{2}{3}\]
+
+\vspace{0.5em}
+
+B) \(45/60\)
+
+\[
+\begin{array}{cc|cc}
+45 & 60 & 3 \\
+15 & 20 & 5 \\
+5  & 4 
+\end{array}
+\]
+
+\[5 \times 3  = 15\]
+
+Agora sabendo que o máximo divisor comum destes números podemos iremos dividir ambos por ele
+
+\[\dfrac{45 \div 15}{60 \div 15} = \dfrac{3}{4}\]
+
+A simplificação não altera o resultado da fração como sabemos que a fração é uma divisão podemos simplesmente dividir os dois números e constatar que o valor continua o mesmo apenas por fim de curiosidade e para por a prova.
+
+\paragraph{Número Misto:} São números que possuem uma parte inteira e outra fracionária.
+
+Para resolver de uma forma bem simples através de um sistema. Primeiro multiplicamos o denominador pelo número inteiro e depois multiplicamos o produto pelo denominador. Este então passa a ser o denominador do número. Complicado ? Relaxa vamos representar e mostrar alguns exemplos que ficará claro.
+
+\vspace{0.5em}
+
+a) \(5 3/4\)
+
+\[5 \dfrac{3}{4} = \dfrac{5 \times 4 + 3}{3} = \dfrac{23}{3}\]
+
+b) 3 2/5
+
+\[3\dfrac{2}{5} = \dfrac{3 \times 5 + 2}{5} = \dfrac{17}{5}\]
+
+\subsection{Comparação entre frações}
+
+Frações muitas vezes representam dizimas periódicas, números com muitas casas decimais. Mas podemos comparar frações de uma maneira muito simples através da \textbf{divisão} onde pegamos apenas as duas primeiras casas decimais.
+
+Colocando-se os números:
+
+\[x=3/5, \quad y=4/7, \quad z=2/3\]
+
+Coloque-os em ordem decrescente.
+
+\subsection{Operação com frações}
+
+\subsubsection{Soma}
+
+Na \textbf{Soma} de denominadores iguais basta somarmos os nominadores.
+
+a) \(3/5 + 1/5 = 4/5\)
+
+Agora quando temos denominadores diferentes temos várias formas realizar a soma, mas aqui vamos utilizar a técnica da borboleta. Que consiste em multiplica os denominadores formando assim o denominador do resultado, e depois multiplicamos cruzado somando o resultado.
+
+b) 2/3 + 1/4 
+
+\(\dfrac{2}{3} + \dfrac{1}{4} = \dfrac{8+3}{12} = \dfrac{11}{12}\)
+
+Quando estamos somando mais de uma fração nós fazemos o processo com os dois primeiros e repetimos com o que sobrou
+
+c) 2/3 + 1/4 + 1/5
+
+\(\dfrac{2}{3} + \dfrac{1}{4} = \dfrac{3 + 8}{12} = \dfrac{11}{12} + \dfrac{1}{5} = \dfrac{12+55}{60} = \dfrac{67}{60}\)
+
+\subsection{Subtração}
+
+Na [[Subtração]] também podemos utilizar o método que usamos anteriormente porém agora ao invés de somar os denominadores nós os subtraímos o processo para a subtração consiste em multiplica os denominadores formando assim o denominador do resultado, e depois multiplicamos cruzando e subtraindo o resultado.
+
+d) 4/7 - 1/6
+
+\(\dfrac{4}{7} - \dfrac{1}{6} = \dfrac{24-7}{42} = \dfrac{17}{42}\)
+
+\subsection{Multiplicação}
+
+A [[Multiplicação]] é o mais simples basta multiplicar denominador por denominador e 
+
+e) 3/8 x 2/5
+
+\(\dfrac{3}{8} \times \dfrac{2}{5} = \dfrac{6}{40}\)
+
+Simples não é mesmo ? Mas aqui temos uma nuance percebe-se que o resultado pode ser simplificado.
+
+\[
+\begin{array}{cc|cc}
+6 & 40 & 2 \\
+3 & 20 & 
+\end{array}
+\]
+
+Porém nós também podemos simplificar assim não precisamos fazer isso depois.
+
+A simplificação neste caso quando temos duas frações que estão realizando uma operação entre em si é simples. Basta usarmos o [[MDC (Máximo Divisor Comum)]] entre eles.
+
+Exemplo
+
+\(\dfrac{3}{8} \times \dfrac{2}{5}\) 
+
+Sabemos que o máximo divisor comum de 2 e 8 é 2. Logo podemos simplificar
+
+
+\[\dfrac{3}{\cancel 8^{4}} \times \dfrac{\cancel 2^{1}}{5} = \dfrac{3}{4} \times \dfrac{1}{5} = \dfrac{3}{20}\]
+
+Como podemos ver tanto faz a simplificação antes ou depois o resultado foi o mesmo \(\frac{3}{20}\), porém é recomendado que seja feito antes para que a operação seja simples e tome menos tempo.
+
+Aqui também podemos observar as frações equivalentes visto que \(\frac{3}{20}\) é equivalente a $\frac{6}{40}$
+
+
+c) 5/6 de 42
+
+Quanto temos as preposições de,da,do. A operação que iremos realizar é a multiplicação e como o 42 não tem denominador ele é um inteiro iremos transforma-ló em uma fração impropria para que possamos realizar a multiplicação.
+
+\[\dfrac{5}{6} \times \dfrac{42}{1}\]
+
+Agora iremos simplificar para não precisarmos fazer isto depois e realizar a multiplicação.
+
+\[\dfrac{5}{\cancel{6}^{1}} \times \dfrac{\cancel{42}^{7}}{1} = \dfrac{35}{1}\]
+
+\subsection{Divisão}
+
+Para realizar a [[Divisão]] de duas frações iremos recorrer a [[Multiplicação]]. Sim é isso mesmo ! Porém, vamos inverter a posição denominador e do nominador da fração pela qual estamos dividindo. Calma, com alguns exemplos tudo fará sentido vamos em parte.
+
+g) \(3/4 \div 7/8\) 
+
+
+Primeiro transformamos em uma multiplicação.
+
+\(\dfrac{3}{4} \times \dfrac{7}{8}\) 
+
+Agora invertemos a segunda, o denominador vira nominador e o nominador vira denominador. E multiplicamos normalmente, simplificando antes de multiplicar, claro para mantermos as coisas simples.
+
+\(\dfrac{3}{\cancel{4}^{1}} \times \dfrac{\cancel{8}^{2}}{7} = \dfrac{6}{7}\)
+
+
+h) 3/8 x 2/5
+
+Primeiro transformamos em uma multiplicação. Agora invertemos a segunda fração, o denominador vira nominador e o nominador vira denominador. E multiplicamos normalmente, simplificando antes de multiplicar neste caso não há simplificação.
+
+\(\dfrac{3}{8} \times \dfrac{5}{2} = \dfrac{15}{16}\)
+
+\section{Equação de Segundo Grau}
+
+É toda sentença aberta, redutível e equivalente a forma \(ax^{2}+ bx + c = 0\), onde $a$, $b$ e $c$ são números reais e a $a \neq 0$.
+
+\subsection{Nomenclatura}
+
+\[ax^{2}+ bx + c = 0\]
+
+\begin{center}\(a\), \(b\) e \(c\) são chamados de coeficientes.
+\end{center}
+
+
+E para identifica-lós temos o seguinte critério, vamos separar o número que multiplica a incógnita. 
+
+\begin{itemize}
+\item \(a\) = acompanha a letra ao quadrado.
+\item \(b\) = acompanha a letra.
+\item \(c\) = está sozinho ou seja não multiplica nenhuma letra.
+\end{itemize}
+
+Exemplos
+
+\vspace{0.5em}
+
+Encontre o coeficiente das equações abaixo.
+
+\vspace{0.5em}
+
+a) \(3x^{2} - 4x -7 = 0\)
+
+\(a = 3\), $b = 4$, $c = -7$
+
+\vspace{0.5em}
+
+Quando não temos nenhum número multiplicando a incógnita na verdade temos o número 1.
+
+\vspace{0.5em}
+
+b) \(x^{2} + 6x = 0\)
+\(a = 1\), $b = 6$, $c = 0$
+
+Percebe-se que quando não há nenhum número sozinho não temos o \(c\). O mesmo vale para \(b\) caso não tenhamos nenhum número multiplicando a incógnita somente o \(a\) como vemos na definição o \(a\) não pode ser nulo, ou seja \(a \neq 0\).
+
+c) \(2x^{2} - 9 = 0\)
+
+\(a = 2\), $b = 0$, $c = -9$
+
+\vspace{0.5em}
+
+Outro erro bem comum, e julgar por quem aparece primeiro, mas nem sempre é o caso.
+
+\vspace{0.5em}
+
+d) \(-9 + 2x + 3x^{2}\)
+
+\(a = 2\), $b = 0$, $c = -9$
+
+\vspace{0.5em}
+
+Devemos sempre nos atentar aos números que acompanham as incógnitas se a incógnita é elevada ao quadrado ou não, ou se o número é sozinho. E agora veremos a utilidade e o porque disto.
+
+\subsection{Formula de bhaskara}
+
+Utilizamos a fórmula de bhaskara quando é pedido o conjunto solução da equação de segundo grau, ou quando pede-se raízes ou zeros da equação.
+
+E para bhaskara temos duas fórmula primeiro para descobrimos delta(\(\Delta\)) e depois para descobrimos cada valor de $x$ no caso x pode ter dois valores que podemos chamar de conjunto solução sendo {$x_1$ e $x_2$}.
+
+
+\begin{center}
+\textbf{Formula de delta:}
+\end{center}
+\[\Delta = b^{2} - 4 \cdot a \cdot c\]
+
+\begin{center}
+\textbf{Fórmula para descobrir os valores de \(x\)}:
+\end{center}
+
+\[x = \dfrac{-b \pm \sqrt{\Delta}}{2 \cdot a}\]
+
+\begin{center}
+\textbf{Exemplos}
+\end{center}
+
+ a) \(x^{2} - 3x + 2 = 0\)
+\(a = 1\), \(b = -3\), \(c = 2\)
+
+\vspace{0.5em}
+
+Primeiro identificamos \(a\), \(b\) e \(c\).
+
+\(x^{2} - 3x + 2 = 0\)
+\(a = 1\), $b = -3$, $c = 2$
+
+\vspace{0.5em}
+
+Depois descobrimos o delta
+
+\begin{align}
+\Delta &= b^{2} - 4 \cdot a \cdot c\\
+\Delta &= (-3^{2}) - 4 \cdot 1 \cdot 2\\
+\Delta &= 9 - 8\\
+\Delta &= 1\\
+\end{align}
+
+E só depois encontramos o conjuntos solução ou seja os valores possíveis de \(x\) como é uma equação de segundo grau, temos dois valores possíveis $x_1$ e $x_2$.
+
+\[x = \dfrac{-b \pm \sqrt{\Delta}}{2 \cdot a}\]
+
+\begin{align}
+x &= \dfrac{-(-3) \pm \sqrt{1}}{2 \cdot 1} = \dfrac{3 \pm 1}{2} \\
+x_1 &= \dfrac{3 + 1}{2} = \dfrac{4}{2} = 2 \\
+x_2 &= \dfrac{3 - 1}{2} = \dfrac{2}{2} = 1 \\
+\end{align}
+
+\begin{center}
+\textbf{Conjunto solução:} \(S = \{1, 2\}\)
+\end{center}
+
+b) \(2x^{2} + 5x - 3 = 0\)
+
+\vspace{0.5em}
+
+Primeiro identificamos \(a\), \(b\) e \(c\).
+
+\vspace{0.5em}
+
+\(2x^{2} + 5x - 3 = 0\)
+\(a = 2\), $b = 5$, $c = -3$
+
+Depois descobrimos o delta
+
+\begin{align*}
+\Delta &= b^{2} - 4 \cdot a \cdot c\\
+\Delta &= 5^{2} - 4 \cdot 2 \cdot (-3\\
+\Delta &= 25 - 8 . (-3)\\
+\Delta &= 25 + 24\\
+\Delta &= 49
+\end{align*}
+
+E só depois encontramos o conjuntos solução ou seja os valores possíveis de \(x\) como é uma equação de segundo grau, temos dois valores possíveis $x_1$ e $x_2$.
+
+\vspace{0.5em}
+
+\[x = \dfrac{-b \pm \sqrt{\Delta}}{2 \cdot a}\]
+
+\begin{align}
+x &= \dfrac{-5 \pm \sqrt{49}}{2 \cdot 2} = \dfrac{5 \pm 7}{4}\\
+x_1 &= \dfrac{-5 + 7}{4} = \dfrac{2}{4} = \dfrac{2 \div 2}{4 \div 2} = \dfrac{1}{2}\\
+x_2 &= \dfrac{-5 - 7}{4} = \dfrac{-12}{4} = -3\\
+\end{align}
+
+\begin{center}
+\textbf{Conjunto solução:} \(S = \{-3, \dfrac{1}{2}\}\)
+\end{center}
+
+c) \(x^{2} -7x = 0\)
+
+\vspace{0.5em}
+
+Primeiro identificamos \(a\), \(b\) e \(c\).
+
+\(x^{2} -7x = 0\)
+\(a = 1\), \(b = -7\), \(c = 0\)
+
+Depois descobrimos o delta
+
+\begin{align*}
+\Delta &= b^{2} - 4 \cdot a \cdot c \\
+\Delta &= (-7^{2}) - 4 \cdot 1 \cdot 0 \\
+\Delta &= 49 - 0 \\
+\Delta &= 49 \\
+\end{align*}
+
+E só depois encontramos o conjuntos solução ou seja os valores possíveis de \(x\) como é uma equação de segundo grau, temos dois valores possíveis \(x_1\) e \(x_2\).
+
+\begin{align*}
+x &= \dfrac{-b \pm \sqrt{\Delta}}{2 \cdot a} \\
+x &= \dfrac{-(-7) \pm \sqrt{49}}{2 \cdot 1} = \dfrac{7 \pm 7}{2} \\
+x_1 &= \dfrac{7 + 7}{2} = \dfrac{14}{2} = 7 \\
+x_2 &= \dfrac{-7 - 7}{2} = \dfrac{0}{2} = 0 \\
+\end{align*}
+
+\begin{center}
+\textbf{Conjunto solução:} \(S = \{0, 7\}\)
+\end{center}
+
+d) \(2x^{2} - 50 = 0\)
+
+\vspace{0.5em}
+
+Primeiro identificamos \(a\), \(b\) e \(c\).
+
+\vspace{0.5em}
+
+\(2x^{2} - 50 = 0\)
+\(a = 2\), $b = 0$, $c = 50$
+
+\vspace{0.5em}
+
+Depois descobrimos o delta
+
+\begin{align*}
+\Delta &= b^{2} - 4 \cdot a \cdot c \\
+\Delta &= 0^{2} - 4 \cdot 2 \cdot 50 \\
+\Delta &= 0 - 400 \\
+\Delta &= 400 
+\end{align*}
+
+E só depois encontramos o conjuntos solução ou seja os valores possíveis de \(x\) como é uma equação de segundo grau, temos dois valores possíveis \(x_1$ e \(x_2\).
+
+\vspace{0.5em}
+
+\begin{align*}
+x &= \dfrac{-b \pm \sqrt{\Delta}}{2 \cdot a} \\
+x &= \dfrac{0 \pm \sqrt{400}}{2 \cdot 2} = \dfrac{0 \pm20}{2} \\
+x_1 &= \dfrac{0 + 20}{2} = \dfrac{20}{2} = 10 \\
+x_2 &= \dfrac{0 - 20}{2} = \dfrac{-20}{2} = -10
+\end{align*}
+
+\begin{center}
+\textbf{Conjunto Solução:} \(S = \{-10, 10\}\)
+\end{center}
+
+\subsection{Propriedades}
+
+Agora que já temos alguns exemplos vamos nos atentar a alguns conceitos.
+
+\vspace{0.5em}
+
+Quando \(C = 0\), uma raiz será sempre zero. Como podemos ver no exemplo c) \(x^{2} -7x = 0\) onde o conjunto solução foi \(S = \{0, 7\}\).
+
+\vspace{0.5em}
+
+E podemos também resolver utilizando Fatoração.
+
+\vspace{0.5em}
+
+Vamos identificar o fator comum
+
+\(x^{2} -7x = 0\)
+
+\vspace{0.5em}
+
+Neste caso é o x. Logo deixamos em evidência
+
+
+\[(x(x - 7) = 0\]
+
+Então temos dois números que multiplicados é igual a zero.
+
+
+\vspace{0.5em}
+
+Isso só sera verdade se o primeiro for igual a zero ou o segundo for igual a zero.
+
+\(x - 7 = 0\)
+
+\(x = 7\)
+\(x = 0\)
+
+Quando \(B = 0\), as raízes serão sempre simétricas. Terão o mesmo valor com sinais contrários.
+
+\vspace{0.5em}
+
+Como podemos ver em B) \(2x^{2} - 50 = 0\)
+
+E quando B = 0, você também consegue resolver sem usar o bhaskara, veremos outras formas mais práticas de resolver mais adiante. Mas quando B = 0, temos essa forma.
+
+\vspace{0.5em}
+
+\begin{align*}
+2x^{2} - 50 = 0 \\
+2x^{2} = 50 \\
+x^{2} = \dfrac{50}{2} \\
+x^{2} = 25 \\
+x = \pm \sqrt{25} \\
+x = \pm 5 \\
+S = \{-5, 5\} \\
+\end{align*}
+
+\subsection{Soma e Produto}
+
+Resolvendo desta forma salvamos uma quantidade considerável de tempo, é útil sabermos pois em uma prova ou em uma situação que precisemos de agilidade é bastante necessária.
+
+Resolvendo através da soma e produto, vamos descobrir dois números que somados e multiplicados resultem nos números que queremos.
+
+Temos então duas situações.
+
+Caso \(a = 1\).
+
+\begin{itemize}
+\item A soma é só trocar o sinal do \(b\).
+\item O produto é o próprio \(C\).
+\end{itemize}
+
+\[x + y = -b\]
+\[x \cdot y = c\]
+
+Caso \(a \neq 1\).
+
+\begin{itemize}
+\item A soma é so trocar o sinal do \(b\)
+\item O produto é o produto de \(a\) por \(c\).
+\end{itemize}
+
+\[(x + y = -b\]
+\[x \cdot y = a \cdot c\]
+
+As raízes encontradas serão dívidas por \(a\)
+
+\(x_1 = \dfrac{x}{a}\)
+
+\(x_2 = \dfrac{y}{a}\)
+
+Vamos ver através de exemplos pois assim fixamos e temos um contexto melhor para as explicações.
+
+ Caso \(a = 1\)
+
+a) \(x^{2} - 5x + 6 = 0\)
+
+Novamente primeiro identificamos \(a\), $b$ e $c$.
+
+\(x^{2} - 5x + 6 = 0\)
+\(a = 1\), $b = -5$, $c = 6$
+
+\(x + y = -b\) 
+\(x \cdot y = c\)
+
+\(x + y = -(-5) = 5\)  
+\(x \cdot y = 6\)
+
+Então temos que descobrir quais números que somados resultam 5 e multiplicados resultam em 6.
+
+Descobriremos isso tirando o [[MMC]] do número que é o produto neste caso o "6".
+
+\[
+\begin{array}{c|cc}
+6 & 2 \\
+3 & 3 \\
+1
+\end{array}
+\]
+Na fatoração já temos o resultado 2 e 3.
+
+Portanto o conjunto solução destes números é S = {2,3}.
+
+b) \(x^{2} + 7 + 12 = 0\)
+
+Novamente primeiro identificamos \(a\), $b$ e $c$.
+
+\(x^{2} + 7 + 12 = 0\)
+\(a = 1\), $b = 7$, $c = 12$
+
+\(x + y = -b\) 
+\(x \cdot y = c\)
+
+\(x + y = -7\)  
+\(x \cdot y = 12\)
+
+Então temos que descobrir quais números que somados resultam -7 e multiplicados resultam em 12.
+
+Descobriremos isso tirando o [[MMC]] do número que é o produto neste caso o "12".
+
+\[
+\begin{array}{c|cc}
+12 & 2 \\
+6 & 2  \\
+3 & 3  \\
+1
+\end{array}
+\]
+
+Neste caso teremos que trabalhar um pouco os resultados do MMC e vermos qual a resposta correta, como são dois números temos que juntar os resultados de forma que forme apenas dois números, 2.2 = 4 e 3, se somarmos 4 e 3 temos 7, e se multiplicarmos temos 12. Mas como queremos -7 e não 7. Os dois números tem que ser negativos. Portanto -3 e -4.
+
+
+\(-3 + (-4) = -3 - 4 = -7\)  
+\(-3 \cdot (-4) = 12\)
+
+Portanto o conjunto solução destes números é S = {-3,-4}.
+
+Não se assuste se ainda não fez muito sentido, a troca dos sinais para o resultado desejado. Veremos mais exemplos para que fique claro.
+
+ Caso \(a \neq 1\) 
+
+c) \(3x^{2} - 4x + 1 = 0\)
+
+Novamente primeiro identificamos \(a\), \(b\) e \(c\).
+
+\(3x^{2} - 4x + 1 = 0\)
+\(a = 3\), $b = -4$, $c = 1$
+
+\(x + y = -b\) 
+\(x \cdot y = a \cdot c\)
+
+\(x + y = -(-4) = 4\)  
+\(x \cdot y = 3 \cdot 1 = 3\)
+
+Então temos que descobrir quais números que somados resultam 4 e multiplicados resultam em 3.
+
+Descobriremos isso tirando o [[MMC]] do número que é o produto neste caso o "12".
+
+\[
+\begin{array}{c|cc}
+3 & 3 \\
+1 & 1
+\end{array}
+\]
+
+Na fatoração já temos o resultado 3 e 1.
+
+
+\(1 + 3 = 4\)  
+\(1 \cdot 3 = 3\)
+
+Porém quando \(a \neq 1\) temos que dividir as raízes por \(a\).
+
+\(x_1 = \dfrac{x}{a}\)
+
+\(x_1 = \dfrac{1}{3}\)
+
+\(x_2 = \dfrac{y}{a}\)
+
+\(x_2 = \dfrac{3}{3} = 1\)
+
+Portanto o conjunto solução destes números é \(S = \{\dfrac{1}{3},1\}\).
+
+ d) \(2x^{2} -7x - 15 = 0\)
+
+Novamente primeiro identificamos \(a\), $b$ e $c$.
+
+\(2x^{2} -7x - 15 = 0\)
+\(a = 2\), $b = -7$, $c = -15$
+
+\(x + y = -b\) 
+\(x \cdot y = a \cdot c\)
+
+\(x + y = -(-7) = 7\)  
+\(x \cdot y = 2 \cdot (-15) = -30\)
+
+Então temos que descobrir quais números que somados resultam em 7 e multiplicados resultam em -30.
+
+Descobriremos isso tirando o [[MMC]] do número que é o produto neste caso o "-30".
+
+\[
+\begin{array}{c|cc}
+30 & 2 \\
+15 & 3 \\
+5  & 5 \\ 
+1
+\end{array}
+\]
+
+Novamente teremos que trabalhar os números obtidos.
+
+Vamos pegar o 3 e o 2.
+
+2 x 3 = 6 + 5 = 11
+
+Não é 7 então vamos pegar 3 e 5.
+
+3 x 5 = 15 + 2 = 17
+
+Também não é. Sobra apenas uma opção que é o 5x2 e o 3.
+
+10 + 3 = 13
+10 . 3 = 30
+
+Porém como queremos -30 vamos trocar o sinal do 3.
+
+10 - 3 = 7
+10 . (-3) = -30
+
+Porém quando \(a \neq 1\) temos que dividir as raízes por $a$.
+
+\(x_1 = \dfrac{x}{a}\)
+
+\(x_1 = \dfrac{10}{2} = 5\)
+
+\(x_2 = \dfrac{y}{a}\)
+
+\(x_2 = \dfrac{-3}{2}\)
+
+Portanto o conjunto solução destes números é \(S = \{\dfrac{-3}{2},5\}\).
+
+ Soma e produto das raízes
+
+Para encontrar-mos a soma e produto das raízes ou seja \(x_1\) e $x_2$, não precisamos necessariamente resolver as equações de segundo grau, pois há formulas que possamos utilizar para tal.
+
+Soma = \(\dfrac{-b}{a}\)
+
+Produto = \(\dfrac{c}{a}\)
+
+Para isso vamos pegar exemplos, para que possamos aprender melhor através da prática.
+
+Determine a soma e o produto das raízes das equações.
+
+a) \(x^{2} - 3x + 4 = 0\)
+
+
+\(a = 1\), \(b = -3\), \(c = 4\)
+
+Soma = \(\dfrac{-b}{a}\)
+
+Soma = \(\dfrac{-(-3)}{1} = 3\)
+
+Produto = \(\dfrac{c}{a}\)
+
+Produto = \(\dfrac{4}{1} = 4\)
+
+a) \(2x^{2} - 7x + 9 = 0\)
+\(a = 2\), $b = -7$, $c = 9$
+
+Soma = \(\dfrac{-b}{a}\)
+
+Soma = \(\dfrac{-(-7)}{2} = \dfrac{7}{2}\)
+
+Produto = \(\dfrac{c}{a}\)
+
+Produto = \(\dfrac{9}{2} = \dfrac{9}{2}\)
+
+c) \(4 - 3x^{2} - 9x = 0\)
+\(a = -3\), $b = -9$, $c = 4$
+
+Soma = \(\dfrac{-b}{a}\)
+
+Soma = \(\dfrac{-(-9)}{-3} = \dfrac{9}{-3} = -3\)
+
+Produto = \(\dfrac{c}{a}\)
+
+Produto = \(\dfrac{4}{-3} = - \dfrac{4}{3}\)
+
+
+\subsection{Discriminante de Delta}
+
+\begin{itemize}
+\item Se \(\Delta > 0\) (positivo), duas raízes reais e diferentes. $x_1 \neq x_2$.
+\item Se \(\Delta = 0\), duas raízes reais e iguais. $x_1 = x_2$.
+\item Se \(\Delta < 0\) (negativo), não possui raízes reais. Pois resultara em uma raíz que não faz parte dos números reais.
+\end{itemize}
+
+Aprendemos melhor através de exemplos.
+
+Sabendo que a equação \(x^{2} - 2x + (m-3) = 0\) tem raízes reais e iguais, qual é o valor de m?
+
+Sabendo que tem raízes reais e e iguais sabemos que \(\Delta = 0\).
+
+
+Vamos então identificar a, b e c.
+
+
+\[x^{2} - 2x + (m-3) = 0\]
+\[a = 1, b = 2, c = m - 3\]
+
+
+Sabendo que \(\Delta = b^{2} + 4 \cdot a \cdot c\) e o delta resultante desta equação é zero podemos resolver da seguinte forma.
+
+\begin{align}
+2^{2} - 4 \cdot 1 \cdot (m-3) = 0 \\
+4 - 4 \cdot 1 \cdot (m-3) = 0 \\
+4 - 4m + 12= 0 \\
+-4m + 16 = 0 \\
+-4m = -16 = 0 \\
+-4m = -16 \cdot (-1) \\
+4m = 16 \\
+m = \dfrac{16}{4} = 4
+\end{align}
+
+\section{Fatoração}
+
+É uma operação matemática que tem como finalidade escrever um polinômio em forma de produto.
+
+\(ab + ac = a(b + c)\)
+
+Fator Comum
+
+Primeiro identificamos o fator comum, o fator comum é aquele que se repete em ambos coeficientes.
+
+Exemplos:
+
+a) \(xy + xz\)
+
+O fator comum é \(x\) pois ele se repete em ambos os coeficientes $xy$ e $xz$. Deixamos ele em evidência, ou seja colocamos ele do lado de fora e abrimos parenteses. Dentro dos parenteses colocamos o que restou $y + z$.
+
+Ou seja ele vai [[Multiplicação|Multiplicar]] tudo que está dentro dos parenteses. Através da propriedade distributiva.
+
+\(xy + xz = x(y + z)\)
+
+Podemos tirar a prova real disto aplicando a distributiva. Revertendo assim a fatoração.
+
+\(x(y + z) = xy + xz\)
+
+b) \(2xy + 3x\)
+
+Primeiro identificamos o fator comum, o fator comum é aquele que se repete em ambos coeficientes. Neste caso também é \(x\). Para facilitar o nosso entendimento, irei removendo do polinômio o que já fatoramos.
+
+\(2\cancel xy + 3 \cancel x = x()\)
+
+Sobrando assim \(2y + 3\). Basta adicionarmos o que sobrou.
+
+\(2 xy + 3x = x(2y + 3)\)
+
+c) \(8x^{3} y^{4} - 12x^{4}y{2}\) 
+
+Agora é um pouco mais complexo pois temos expoentes:
+
+Primeiro tiramos o [[MDC (Máximo Divisor Comum)]] dos coeficientes
+
+\[
+\begin{array}{cc|cc}
+8, & 12 & 2 \\
+4, & 6 & 2 \\ 
+2, & 3
+\end{array}
+\]
+
+\[8x^{3} y^{4} - 12x^{4}y{2} = 4\]
+
+Identificar o fator comum, neste caso \(xy\)
+Sempre colocaremos em evidência o com menor expoente 
+ * \(x\), temos $x^{3}$ e $x^{4}$. Logo é $x^{4}$.
+ * \(y\), temos $y^{4}$ e $y^{4}$. Logo é $y^{2}$.
+
+\(8 x^{3} y^{4} - 12 x^{4} y{2} = 4x^{3}y^{2}\)
+
+Agora que colocamos em evidência o fator comum: \(4x^{3}y^{2}\) 
+
+Vamos escrever o que sobrou entre parenteses, porém agora comparando o fator comum, com ambos os coeficientes.
+
+Vamos começar com \(8 x^{3} y^{4}\). Vamos escrever o que falta de $4x^{3}y^{2}$ para que ele seja igual a $8 x^{3} y^{4}$ dentro dos parenteses. Comparando número com número, letra com letra.
+ 
+\(8x^{3} y^{4}\)
+\(4x^{3}y^{2}\)
+
+4 de para 8, basta multiplicarmos por 2.
+\(8 x^{3} y^{4} - 12 x^{4} y{2} = 4x^{3}y^{2}(2)\)
+
+\(x^{3}\)  e $x^{3}$ tem o mesmo valor então multiplicamos por 1.
+\(8 x^{3} y^{4} - 12 x^{4} y{2} = 4x^{3}y^{2}(2 \cdot  1)\)
+
+\(y^{2}\) para $y^{4}$ lembrando das propriedades da [[Potenciação]] basta multiplicarmos por $y^{2}$.
+\(8 x^{3} y^{4} - 12 x^{4} y{2} = 4x^{3}y^{2}(2 \cdot  1 \cdot y^{2})\)
+
+Agora comparamos com o segundo coeficiente da mesma forma. Mantemos o sinal do coeficiente e realizamos a comparação.
+
+\(12 x^{4} y{2}\)
+\(4x^{3}y^{2}\)
+
+4 de para 12, basta multiplicarmos por 3.
+\(8 x^{3} y^{4} - 12 x^{4} y{2} = 4x^{3}y^{2}(2 \cdot  1 \cdot y^{2} - 3)\)
+
+\(x^{3}\) para $x^{4}$ multiplicamos por $x$
+\(8 x^{3} y^{4} - 12 x^{4} y{2} = 4x^{3}y^{2}(2 \cdot  1 \cdot y^{2} - 3 \cdot x)\)
+
+\(y^{2}\) é o mesmo que $y^{2}$ logo multiplicamos por 1.
+\(8 x^{3} y^{4} - 12 x^{4} y{2} = 4x^{3}y^{2}(2 \cdot  1 \cdot y^{2} - 3 \cdot x \cdot 1)\)
+
+\(8 x^{3} y^{4} - 12 x^{4} y{2} = 4x^{3}y^{2}(2 \cdot  1 \cdot y^{2} - 3 \cdot x \cdot 1)\)
+
+Agora resolvemos o que está entre parenteses e temos a fatoração completa.
+\(8 x^{3} y^{4} - 12 x^{4} y{2} = 4x^{3}y^{2}(2y^{2} - 3)\)
+
+Agora que tivemos uma introdução com outro exemplo ficara claro.
+
+d)\(15x^{3}y^{2} - 10x^{2}y^{3}\)
+
+Primeiro tiramos o [[MDC (Máximo Divisor Comum)]] dos coeficientes
+
+\[
+\begin{array}{cc|cc}
+15, & 10 & 5 \\
+3, & 2 
+\end{array}
+\]
+
+\[15x^{3}y^{2} - 10x^{2}y^{3} = 5\]
+
+Identificar o fator comum, neste caso também é \(xy\)
+Sempre colocaremos em evidência o com menor expoente 
+ * \(x\), temos $x^{3}$ e $x^{2}$. Logo é $x^{2}$.
+ * \(y\), temos $y^{2}$ e $y^{3}$. Logo é $y^{2}$.
+
+\(15x^{3}y^{2} - 10x^{2}y^{3} = 5x^{2}y^{2}\)
+
+Agora que colocamos em evidência o fator comum: \(15x^{3}y^{2} - 10x^{2}y^{3}\) 
+
+Vamos escrever o que sobrou entre parenteses, porém agora comparando o fator comum, com ambos os coeficientes.
+
+Vamos começar com \(15x^{3}y^{2}\). Vamos escrever o que falta de $5x^{2}y^{2}$ para que ele seja igual a $15x^{3}y^{2}$ dentro dos parenteses. Comparando número com número, letra com letra.
+ 
+\(15x^{3}y^{2}\)
+\(5x^{2}y^{2}\)
+
+5 de para 15, basta multiplicarmos por 3.
+\(15x^{3}y^{2} - 10x^{2}y^{3} = 5x^{2}y^{2}(3)\)
+
+\(x^{2}\) de para $x^{3}$ basta multiplicarmos por $x$.
+\(15x^{3}y^{2} - 10x^{2}y^{3} = 5x^{2}y^{2}(3 \cdot x)\)
+
+\(y^{2}\) é o mesmo que $y^{2}$ multiplicamos por 1.
+\(15x^{3}y^{2} - 10x^{2}y^{3} = 5x^{2}y^{2}(3 \cdot x \cdot 1)\)
+
+Agora comparamos com o segundo coeficiente da mesma forma. Mantemos o sinal do coeficiente e realizamos a comparação.
+
+\(10x^{2}y^{3}\)
+\(5x^{2}y^{2}\)
+
+5 de para 10, basta multiplicarmos por 2.
+\(15x^{3}y^{2} - 10x^{2}y^{3} = 5x^{2}y^{2}(3 \cdot x \cdot 1 - 2)\)
+
+\(x^{2}\) é o mesmo que $x^{2}$ multiplicamos por 1.
+\(15x^{3}y^{2} - 10x^{2}y^{3} = 5x^{2}y^{2}(3 \cdot x \cdot 1 - 2 \cdot 1)\)
+
+\(y^{2}\) para $y^{3}$ multiplicamos por $y$.
+\(15x^{3}y^{2} - 10x^{2}y^{3} = 5x^{2}y^{2}(3 \cdot x \cdot 1 - 2 \cdot 1 \cdot y)\)
+
+Agora resolvemos o que está entre parenteses e temos a fatoração completa:
+\(15x^{3}y^{2} - 10x^{2}y^{3} = 5x^{2}y^{2}(3x - 2y)\)
+
+\subsection{Agrupamento}
+
+O agrupamento é uma maneira prolongada da fatoração onde você tem basicamente uma fatoração seguida de outra.
+
+Exemplos:
+
+a) \(ax + ay + bx + by\)
+
+Como podemos ver temos duas fatorações
+\(ax + ay\) e \(bx + by\).
+
+Vamos identificar os fatores comuns
+\(ax + ay\) é \(a\). \(bx + by\) é \(b\).
+
+\(\cancel ax + \cancel ay + \cancel bx + \cancel by = a(x+y) + b(x+y)\)
+
+Porém o resultado também pode ser fatorado visto que \(a(x+y) + b(x+y)\) tem como fator comum \(x+y\). Então o colocamos em evidência.
+
+\(ax + ay + bx + by = (x+y)\cdot (b+a)\)
+
+Novamente se quisermos tirar a prova disto basta resolvermos usando a propriedade distributiva.
+
+b) \(xy - 5x + 3y - 15\)
+
+como podemos ver temos duas fatorações
+\(xy -5x\) e \(3y - 15\).
+
+Vamos identificar os fatores comuns
+\(xy - 5x\) é \(x\). 
+
+Quando temos apenas números, ou seja não temos coeficientes, o fator comum será o MDC dos números.
+
+\[
+\begin{array}{cc|cc}
+3, & 15 & 3 \\
+1, & 3 
+\end{array}
+\]
+
+O fator comum de \(3y - 15\) é $3$.
+
+Pegamos o que sobrou \(y\) e $-15$, porém vamos novamente comparar quanto falta para que 3 seja igual a -15.
+
+De 3 para -15 multiplicamos por -5.
+
+\(xy - 5x + 3y - 15 = x(y - 5) \cdot 3(y -5)\)
+
+Porém o resultado também pode ser fatorado visto que \(x(y - 5) \cdot 3(y -5)\) tem como fator comum $(x+y)$. Então o colocamos em evidência.
+
+\(xy - 5x + 3y - 15 = (y - 5) \cdot (x + 3)\)
+
+c)\(x^{3} + 2x^{2} + x + 2\)
+
+
+TODO explicar melhor
+Aqui temos apenas uma fatoração.
+\(x^{3} + 2x^{2}\) e \(x + 2\)
+
+Percebe-se agora temos expoentes então vamos novamente ao identificar o fator comum, colocamos em evidência o que apresenta o menor expoente.
+
+\(x^{3} + 2x^{2}\) o fator comum é \(x\).
+
+entre \(x^{3}\) e \(x^{2}\) colocaremos em evidência o \(x^{2}\).
+
+E vamos novamente comparar letra com letra e número com número.
+
+\(x^{3} + 2x^{2}\)
+\(x^{2}\)
+
+de \(x^{2}\) para \(x^{3}\) multiplicamos por \(x\).
+de \(x^{2}\) para \(2x^{2}\) basta adicionarmos 2.
+
+\(x^{3} + 2x^{2} + x + 2 = x^{2}(x + 2) + x + 2\)
+
+E se olharmos para \(x^{2}(x + 2) + x + 2\) veremos que \(x+2\) é um fator comum logo.
+
+\(x^{3} + 2x^{2} + x + 2 = (x + 2) \cdot (x^{2} + 1)\)
+
+Quando temos apenas números, ou seja não temos coeficientes, o fator comum será o MDC dos números.
+
+\[
+\begin{array}{cc|cc}
+3, & 15 & 3 \\
+1, & 3 
+\end{array}
+\]
+
+O fator comum de \(3y - 15\) é $3$.
+
+Pegamos o que sobrou \(y\) e $-15$, porém vamos novamente comparar quanto falta para que 3 seja igual a -15.
+
+De 3 para -15 multiplicamos por -5.
+
+\[xy - 5x + 3y - 15 = x(y - 5) \cdot 3(y -5)\]
+
+Porém o resultado também pode ser fatorado visto que \(x(y - 5) \cdot 3(y -5)\) tem como fator comum \(x+y)\). Então o colocamos em evidência.
+
+\[xy - 5x + 3y - 15 = (y - 5) \cdot (x + 3)\]
+
+\end{document}
